@@ -8,3 +8,10 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
+const express = require('express');
+const userscontroller = require('../controllers/users');
+const router = express.Router();
+
+router.get('/', users);
+
+module.exports = router;

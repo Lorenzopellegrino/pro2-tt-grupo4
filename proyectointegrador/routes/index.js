@@ -9,8 +9,9 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 
 const express = require('express');
+const indexcontroller = require('../controllers/indexcontroller');
 const router = express.Router();
 
-router.get('')
+router.get('/', indexcontroller.index);
 
 module.exports = router;
