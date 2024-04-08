@@ -7,8 +7,12 @@ const info ={
         numero_documento:
         foto
     },
-    productos:[
+    productos:{[
         
     ],
+    comentarios:[
+
+    ]}
+    
 
 }
