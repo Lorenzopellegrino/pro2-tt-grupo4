@@ -10,33 +10,33 @@ const info ={
 
     productos:[
         {
-        imagen:
-        nombre: 
-        foto:
+        imagen: 
+        nombre: 'Camiseta Barcelona'
+        descripcion: 'Camiseta del Barcelona de la temporada 2008/2009'
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -47,60 +47,28 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-        ]
-        },
-        {
-        imagen:
-        nombre: 
-        foto:
-        comentarios:[
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -111,60 +79,28 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-        ]
-        },
-        {
-        imagen:
-        nombre: 
-        foto:
-        comentarios:[
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -175,60 +111,28 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-        ]
-        },
-        {
-        imagen:
-        nombre: 
-        foto:
-        comentarios:[
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -239,28 +143,28 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -271,28 +175,124 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
+                foto_de_perfil:
+            },
+        ]
+        },
+        {
+        imagen:
+        nombre: 
+        foto:
+        comentarios:[
+            {
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
+                foto_de_perfil:
+            },
+        ]
+        },
+        {
+        imagen:
+        nombre: 
+        foto:
+        comentarios:[
+            {
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
+                foto_de_perfil:
+            },
+            {
+                user: 'juan perez'
+                comentario: 'que buen producto'
+                foto_de_perfil:
+            },
+            {
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
+                foto_de_perfil:
+            },
+        ]
+        },
+        {
+        imagen:
+        nombre: 
+        foto:
+        comentarios:[
+            {
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
+                foto_de_perfil:
+            },
+            {
+                user: 'juan perez'
+                comentario: 'que buen producto'
+                foto_de_perfil:
+            },
+            {
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
@@ -303,28 +303,28 @@ const info ={
         foto:
         comentarios:[
             {
-                user:
-                comentario:
+                user: 'joacopro'
+                comentario: 'Gran producto, lo recomiendo'
+                foto_de_perfil: 
+            },
+            {
+                user: 'luis_gomez'
+                comentario: 'Tarda mucho en llegar el envio?'
+                foto_de_perfil: 
+            },
+            {
+                user: 'alfonsogimenez'
+                comentario: '10/10, lo probe y me encanto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
+                user: 'juan perez'
+                comentario: 'que buen producto'
                 foto_de_perfil:
             },
             {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
-                foto_de_perfil:
-            },
-            {
-                user:
-                comentario:
+                user: 'eugenia_ramirez'
+                comentario: 'No lo recomiendo'
                 foto_de_perfil:
             },
         ]
