@@ -40,6 +40,22 @@ FOREIGN KEY (producto_id) REFERENCES productos(id),
 FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
 );
 
+INSERT INTO usuarios 
+VALUES (DEFAULT, 'joacopro@gmail.com', '1234', '2004-12-16', '46293228', 'linkfotoperfil', DEFAULT, DEFAULT )
+INSERT INTO usuarios 
+VALUES (DEFAULT, 'delfi@gmail.com', '1234', '2003-02-12', '41233248', 'linkfotoperfil', DEFAULT, DEFAULT )
+INSERT INTO usuarios 
+VALUES (DEFAULT, 'javi12@gmail.com', '1234', '2002-10-04', '34293448', 'linkfotoperfil', DEFAULT, DEFAULT )
+INSERT INTO usuarios 
+VALUES (DEFAULT, 'santiperez@gmail.com', '1234', '2006-03-16', '46293228', 'linkfotoperfil', DEFAULT, DEFAULT )
+INSERT INTO usuarios 
+VALUES (DEFAULT, 'sofia19@gmail.com', '1234', '2004-12-16', '46293228', 'linkfotoperfil', DEFAULT, DEFAULT )
+
+
+
+
+
+
 
 
 

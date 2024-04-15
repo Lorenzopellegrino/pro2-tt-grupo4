@@ -1,3 +1,5 @@
+const db = require('../db/data')
+
 const usercontroller = {
     login: function(req, res){
         return res.send()
