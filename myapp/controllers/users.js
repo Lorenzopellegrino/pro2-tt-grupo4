@@ -9,7 +9,7 @@ const usercontroller = {
     },
     profile: function(req, res){
         return res.send()
-    },c
+    },
     edit: function(req, res){
         return res.send()
     }
