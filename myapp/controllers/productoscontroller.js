@@ -8,4 +8,4 @@ const productocontoller = {
         return res.render('product' , {title : 'Agregar Producto' , productos : db.productos , usuario : db.usuario})
 }};
 
-module.exports = productocontoller
+module.exports = productocontoller;
