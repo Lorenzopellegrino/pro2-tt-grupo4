@@ -8,11 +8,11 @@ const usercontroller = {
         res.render("register", {title: "REGISTER"})
     },
     profile: function(req, res){
-        res.render("profile", {title: "PROFILE", usuario: db.usuarios, producto: db.productos})
+        res.render("profile", {title: "PROFILE", usuario: db.usuario, producto: db.productos})
     },
     edit: function(req, res){
         res.render("edit", {title: "EDIT", usuario: db.usuario})
     }
 };
 
-module.exports = usercontroller
+module.exports = usercontroller;

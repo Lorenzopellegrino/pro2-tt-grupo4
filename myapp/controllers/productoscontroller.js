@@ -1,11 +1,11 @@
 const db = require('../db/data')
 
 const productocontoller = {
-    index: function(req, res){
-        res.render('product' , {title : 'Detalle Producto' , productos : db.productos})
+    index: function(req, res , next){
+        return res.render('product' , {title : 'Detalle Producto' , productos : db.productos})
     },
-    create: function(req, res){
-        res.render('product' , {title : 'Agregar Producto' , productos : db.productos , usuario : db.usuario})
+    create: function(req, res, next){
+        return res.render('product' , {title : 'Agregar Producto' , productos : db.productos , usuario : db.usuario})
 }};
 
 module.exports = productocontoller;
