@@ -16,13 +16,21 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> <i>///////////////////////////////////////// <br> Acá va el formulario de registro. <br>
-			Debe cumplir con los puntos de la consigna y ser coherente con la tabla de la base de datos <br>
-			Eliminen estás líneas y coloquen el formulario. <br>
-			Recuerden todo lo que necesita tanto la etiqueta form como los campos input para operar correctamtente</i> <br>
-			////////////////
-			</h2>
-
+			<form class="formulario formulario-register" action="/users/profile" method="get">
+				<label class="formulario-label" for="email">Email</label> <br> 
+				<input class="formulario-input" type="email" id="email" name="email" value="" placeholder="ejemplo@gmail.com" required><br>
+				<label class="formulario-label" for="usuario">Usuario</label> <br>
+				<input class="formulario-input" type="text" name="usuario" id="usuario" value="" placeholder="ejemplo" required><br>
+				<label class="formulario-label" for="password">Ingrese su nueva contraseña</label><br>
+				<input class="formulario-input" type="text" id="password" name="password" placeholder="contraseña" ><br>
+				<label class="formulario-label" for="birthdate">Fecha de nacimiento</label><br>
+				<input class="formulario-input" type="date" name="birthdate" value="" required><br>
+				<label class="formulario-label" for="document_number">Numero de documento</label><br>
+				<input class="formulario-input" type="number" id="documento" name="documento" value="" placeholder="12345678">
+				<label class="formulario-label" for="profile_picture">Foto de perfil</label><br>
+				<input class="formulario-input" type="file" id="foto_de_perfil" name="foto_de_perfil"> <br>
+				<a class="buy-now-button" href="/users/login">Guardar</a>
+			</form> 
 
 	<!-- footer -->
 	<%- include("./partials/footer") %>

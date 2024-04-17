@@ -66,9 +66,14 @@ hr {
 
 
 /*====== Main Header ======*/
+.fotologo{
+  height: 70px;
+  width: 70px;
+}
+
 .main-header {
   padding: 15px 0;
-  background-color: var(--yellow);
+  background-color: var(--green);
 }
 
 .main-header_home-link,
@@ -154,7 +159,7 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/img-home-banner.jpg);
+  background-image: url(/images/Imagen\ de\ WhatsApp\ 2024-04-17\ a\ las\ 12.49.03_bb7588cd.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -175,7 +180,7 @@ hr {
 }
 
 .product-box {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 5px;
   overflow: hidden;
   transition: 300ms;
