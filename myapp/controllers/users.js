@@ -11,7 +11,7 @@ const usercontroller = {
         res.render("profile", {title: "PROFILE", usuario: db.usuario, producto: db.productos})
     },
     edit: function(req, res){
-        res.render("edit", {title: "EDIT", usuario: db.usuario})
+        res.render("profile-edit", {title: "EDIT", usuario: db.usuario})
     }
 };
 
