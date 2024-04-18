@@ -10,7 +10,7 @@ const info ={
 
     productos:[
         {
-        imagen: "https://www.thunderinternacional.com/cdn/shop/products/barcelona-titular-2009-messi-matchday-final-de-champions-979229.jpg?v=1613456732",
+        imagen: "https://assets-es.imgfoot.com/media/cache/800x800/fc-barcelone-third-2009-2010.jpg",
         nombre: 'Camiseta Barcelona',
         descripcion: 'Camiseta del Barcelona de la temporada 2008/2009',
         comentarios:[
@@ -42,9 +42,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF6VASBa4XF7gnV8fbkNc0k8MsBOYripT4-8cj6-0ibw&s",
-        nombre: "Camiseta Barcelona",
-        descripcion: "Camiseta Barcelona de la temporada 2011",
+        imagen: "https://www.thunderinternacional.com/cdn/shop/products/arsenal-2022-23-adidas-home-kit-10_be987551-744e-4d7b-9378-8960f2459ee4.jpg?v=1663803765",
+        nombre: "Camiseta Arsenal",
+        descripcion: "Camiseta Arsenal de la temporada 2022-2023",
         comentarios:[
             {
                 user: 'joacopro',
@@ -74,9 +74,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3RHuV9BPh7ZDsryT54-pDR3jOvPygunmekPdWJ_kY2w&s",
-        nombre: "Camiseta Manchester City",
-        descripcion: "Camiseta Manchester City de la temporada 2016",
+        imagen: "https://assets-es.imgfoot.com/media/cache/800x800/acm-away-2023-2024.jpg",
+        nombre: "Camiseta Milan",
+        descripcion: "Camiseta Milan de la temporada 2023-2024",
         comentarios:[
             {
                 user: 'joacopro',
@@ -106,9 +106,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://m.media-amazon.com/images/I/61kzzrnV9fL._AC_SL1006_.jpg",
+        imagen: "https://www.thunderinternacional.com/cdn/shop/files/uz21Ma4d4AMrmII.jpg?v=1694097272",
         nombre: "Camiseta Real Madrid",
-        descripcion: "Camiseta Real Madrid 2015",
+        descripcion: "Camiseta Real Madrid 2023-2024",
         comentarios:[
             {
                 user: 'joacopro',
@@ -138,9 +138,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://www.thunderinternacional.com/cdn/shop/products/camiseta-adidas-de-river-plate-2018-19-frente_68122d40-14b9-42e8-8bae-831825fa772f.jpg?v=1681394469",
-        nombre: "Camiseta River",
-        descripcion: "Camiseta River de la temporada 2018",
+        imagen: "https://assets-es.imgfoot.com/media/cache/800x800/liverpool-home-2017-2018-6274e81191f66.jpg",
+        nombre: "Camiseta Liverpool",
+        descripcion: "Camiseta Liverpool de la temporada 2018-2019",
         comentarios:[
             {
                 user: 'joacopro',
@@ -170,9 +170,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://acdn.mitiendanube.com/stores/001/220/451/products/nike-jordan-xxxiii-2022-04-04t215806-2811-1098cb71fd288e298a16491210604442-640-0.png",
-        nombre: "Camiseta Boca Juniors",
-        descripcion: "Camiseta Boca Juniors de la temporada 2020",
+        imagen: "https://www.thunderinternacional.com/cdn/shop/products/manchester-united-2021-22-adidas-home-kit-6_d38da108-b119-480b-9861-5fa2bbc5635e.jpg?v=1641420217",
+        nombre: "Camiseta Manchester United",
+        descripcion: "Camiseta Manchester United de la temporada 2021-2022",
         comentarios:[
             {
                 user: 'joacopro',
@@ -202,9 +202,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFsKnpT74CVO-5zXqwCL1Y7xsTEeYTbTn4S3XU3z6j8w&s",
-        nombre: "Camiseta River",
-        descripcion: "Camiseta River de la temporada 2022",
+        imagen: "https://newsport.vtexassets.com/arquivos/ids/18695432-800-auto?v=638445490112700000&width=800&height=auto&aspect=true",
+        nombre: "Camiseta Bayern Munich",
+        descripcion: "Camiseta Bayern Munich de la temporada 2023-2024",
         comentarios:[
             {
                 user: 'joacopro',
@@ -234,9 +234,9 @@ const info ={
         ]
         },
         {
-        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Xdl9IYJJ-TvFaoQXeYk-61wkTEF7uk0ATwRNFZJYTA&s",
-        nombre: "Camiseta Real Madrid",
-        descripcion: "Camiseta Real Madri de la temporada 2012",
+        imagen: "https://www.lars7.com/image/cache/20230828SX/camiseta-borussia-dortmund-2-equipacion-2023-2024-001-1000x1000.jpg",
+        nombre: "Camiseta Borussia Dortmund ",
+        descripcion: "Camiseta Borussia Dortmund de la temporada 2023-2024",
         comentarios:[
             {
                 user: 'joacopro',
