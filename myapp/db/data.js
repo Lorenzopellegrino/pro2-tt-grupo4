@@ -16,27 +16,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil:'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -48,27 +48,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: 'Muy buena',
+                comentario: ' Muy buena',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -80,27 +80,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -112,27 +112,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -144,27 +144,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -176,27 +176,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -208,27 +208,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -240,27 +240,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -272,27 +272,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
@@ -304,27 +304,27 @@ const info ={
         comentarios:[
             {
                 user: 'joacopro',
-                comentario: 'Gran producto, lo recomiendo',
+                comentario: ' Gran producto, lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'luis_gomez',
-                comentario: 'Tarda mucho en llegar el envio?',
+                comentario: ' Tarda mucho en llegar el envio?',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: ' 10/10, lo probe y me encanto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'juan perez',
-                comentario: 'que buen producto',
+                comentario: ' que buen producto',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {
                 user: 'eugenia_ramirez',
-                comentario: 'No lo recomiendo',
+                comentario: ' No lo recomiendo',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
         ]
