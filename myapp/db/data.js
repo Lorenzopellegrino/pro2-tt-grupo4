@@ -58,7 +58,7 @@ const info ={
             },
             {
                 user: 'alfonsogimenez',
-                comentario: '10/10, lo probe y me encanto',
+                comentario: 'Muy buena',
                 foto_de_perfil: 'https://www.madereralobos.com.ar/images/productos/697.jpg'
             },
             {

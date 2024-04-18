@@ -16,19 +16,12 @@
 		</div>
 		<div class="product-detail">
 			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img class="product-detail-img" src=<%= productos[0].imagen %> >
-                    <p class="product-detail-description"><%= productos[0].descripcion %></p>
-                </article>
+				
+				
+				
                 <div class="col-12 col-lg-4">
                     <section class="comments">
-                        <% for(let index = 0; index < productos[0].comentarios.length; index++) {%>
-                        <article>
-                            <img src=<%= productos[0].comentarios[index].foto_de_perfil %> alt="">
-                            <div class="info">
-                                <p class="usuario"><strong> <a href="/users/profile"><%= productos[0].comentarios[index].user%></a></strong> <%= productos[0].comentarios[index].comentario %> </p>
-                            </div>
-                        </article>
+                        <% for(let index = 0; index < productos[index].comentarios.length; index++) {%>
                         <%}%>
                     </section>
                 
