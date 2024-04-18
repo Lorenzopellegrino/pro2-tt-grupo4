@@ -267,6 +267,7 @@ hr {
   background-color: #ffffff;
   padding: 20px 0;
   margin-top: 80px;
+  width: 100%;
 }
 
 .footer-data {
@@ -479,6 +480,10 @@ textarea.form-input {
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+}
+
+.foto-index{
+  height: 280px;
 }
 
 
