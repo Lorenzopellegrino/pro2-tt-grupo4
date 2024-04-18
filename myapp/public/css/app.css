@@ -159,11 +159,12 @@ hr {
 
 /*====== Banner ======*/
 .banner {
-  background-image: url(/images/Imagen\ de\ WhatsApp\ 2024-04-17\ a\ las\ 12.49.03_bb7588cd.jpg);
+  background-image: url(/images/banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   height: 100px;
+  
 }
 
 
