@@ -27,7 +27,7 @@ body {
 }
 
 body {
-  font-family: var(--base-font-family);
+  font-family: var(--light-gray);
   font-weight: 300;
   background-color: var(--light-gray);
 }
@@ -73,7 +73,7 @@ hr {
 
 .main-header {
   padding: 15px 0;
-  background-color: var(--green);
+  background-color: var(--dark-blue);
 }
 
 .main-header_home-link,
@@ -130,6 +130,11 @@ hr {
 .main-navbar {
   margin-top: 20px;
   display: none;
+  color:white
+}
+
+.main-header_credit-link{
+  color: white;
 }
 
 .left-navbar,
@@ -161,7 +166,7 @@ hr {
 .banner {
   background-image: url(../images/banner.png);
   background-size: cover;
-  height: calc(35rem + 15vw);
+  height:500px;
 }
 
 
