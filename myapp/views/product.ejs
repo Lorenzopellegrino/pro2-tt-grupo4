@@ -9,7 +9,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title"><%= productos[0].nombre %></h2> 
 			<p class="product-detail-description">
 				<a href="/product/add">Editar</a>
 			</p>
@@ -25,7 +25,7 @@
 				
     		 	<div class="col-12 col-lg-4">
             		<section class="comments">
-                		<% for(let index = 0; index < productos[index].comentarios.length; index++) {%>
+                		<% for(let index = 0; index < productos[0].comentarios.length; index++) {%>
 							<article>
 								<img src=<%= productos[0].comentarios[index].foto_de_perfil %> alt="">
 								<div class="info">
