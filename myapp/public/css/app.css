@@ -305,6 +305,17 @@ hr {
   padding: 15px 0;
 }
 
+.div-nosotros{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.nosotros{
+  font-size: large;
+}
+
 
 /*====== Product Detail ======*/
 .product-detail {
@@ -460,6 +471,16 @@ textarea.form-input {
   min-height: 140px;
   resize: vertical;
   padding: 15px;
+}
+
+.formulario{
+  padding: 0 10px;
+}
+
+.formulario-register{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
 }
 
 /*====== Profile ======*/

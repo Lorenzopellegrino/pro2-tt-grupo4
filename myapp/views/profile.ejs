@@ -23,6 +23,7 @@
 					<a class="btn mt-3 ml-4" href="">SEGUIR</a>
 				</div>
 				<div>
+                    <p><%= usuario.email %></p>
 					<ul class="">
 						<li>8 productos</li>
 						<li>200 seguidores</li>
@@ -46,17 +47,19 @@
 					<section class="product-box">
 						<a href="/product">
 							<figure class="product-box_image">
-								<img class="foto-index" src=<%= productos[index].imagen %>>
+								<img class="foto-index" src=<%= producto[index].imagen %>>
 							</figure>
 							<article class="product-box_data">
-								<h2><%= productos[index].nombre %></h2>
-								<p><%= productos[index].descripcion %></p>
-								<p>Comentarios: <%= productos[index].comentarios.length %></p>
+								<h2><%= producto[index].nombre %></h2>
+								<p><%= producto[index].descripcion %></p>
+								<p>Comentarios: <%= producto[index].comentarios.length %></p>
 							</article>
 						</a>
 					</section>
 				</div>
-				<% } %>
+			<% } %>
+        </div>
+    </div>
 	<!-- /Mis productos -->
 
 

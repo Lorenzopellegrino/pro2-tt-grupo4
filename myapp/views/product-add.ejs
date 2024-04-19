@@ -16,19 +16,19 @@
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12"></h2>
             <form class="fromulario" action="/users/profile" method="get">
-                <label class="fromulario-label" for="imagen">Imagen</label><br>
-                <input class="formulario-input" type="file" id="imagen" name="imagen" required><br>
+                <label class="form-label" for="imagen">Imagen del Producto</label><br>
+                <input class="form-input" type="file" id="imagen" name="imagen" required><br>
 
-                <label class="fromulario-label" for="nombre">Nombre del Producto</label><br>
-                <input class="formulario-input" type="text" id="nombre" name="nombre" required><br>
+                <label class="form-label" for="nombre">Nombre del Producto</label><br>
+                <input class="form-input" type="text" id="nombre" name="nombre" required><br>
 
-                <label class="fromulario-label" for="descripcion">Descripción del Producto</label><br>
-                <input class="formulario-input" type="text" id="descripcion" name="descripcion" required><br>
+                <label class="form-label" for="descripcion">Descripción del Producto</label><br>
+                <textarea class="form-input" type="text" id="descripcion" name="descripcion" required></textarea><br>
 
-                <button type="submit">Enviar</button>
+                <button class="buy-now-button" type="submit">Agregar Producto</button>
             </form>
-
-
+        </div>
+    </div>
     <%- include("./partials/footer") %>
 	
 </body>
