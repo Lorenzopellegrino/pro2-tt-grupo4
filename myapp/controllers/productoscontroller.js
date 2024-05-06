@@ -2,6 +2,7 @@ const db = require('../db/data');
 
 const productocontoller = {
     index: function(req, res){
+        
         return res.render('product', {title : 'Detalle Producto' , productos : db.productos})
     },
     add: function(req, res){

@@ -26,9 +26,9 @@ const funcionProducto = function (sequelize, dataTypes) {
 
         /* definir un modelo */
 
-    let Comentario = sequelize.define(alias, cols, config);
+    let Producto = sequelize.define(alias, cols, config);
 
-    return Comentario;
+    return Producto;
 }
 
-module.exports = funcionComentario
+module.exports = funcionProducto
