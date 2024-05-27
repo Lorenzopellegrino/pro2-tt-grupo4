@@ -2,11 +2,28 @@ const db = require('../db/data');
 
 const productocontoller = {
     index: function(req, res){
-        
-        return res.render('product', {title : 'Detalle Producto' , productos : db.productos})
+
+        db.productos.findByPk(id)
+        .then(function (results) {
+           return res.send("OK")
+           
+        }).catch(function(respuestaNegativa) {
+            console.log(respuestaNegativa);
+        })
+        // return res.render('product', {title : 'Detalle Producto' , productos : db.productos})
+
     },
     add: function(req, res){
-        return res.render('product-add' , {title : 'Agregar Producto' , usuario : db.usuario})
+
+        db.usuario.findOne()
+        .then(function (results) {
+            return res.send("OK")    
+
+        }).catch(function (respuestaNegativa) {
+            console.log(respuestaNegativa);
+        })
+
+        // return res.render('product-add' , {title : 'Agregar Producto' , usuario : db.usuario})
 }};
 
 module.exports = productocontoller;
