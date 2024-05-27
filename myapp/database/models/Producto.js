@@ -7,15 +7,19 @@ const funcionProducto = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        producto_id: {
+        usuarios_id: {
             type: dataTypes.INTEGRER
         },
-        usuario_id: {
-            type: dataTypes.INTEGRER
+        imagen_producto: {
+            type: dataTypes.STRING
         },
-        comentario: {
+        nombre_producto: {
+            type: dataTypes.STRING
+        },
+        descripcion_producto: {
             type: dataTypes.STRING
         }
+
     };
     
     let config = {

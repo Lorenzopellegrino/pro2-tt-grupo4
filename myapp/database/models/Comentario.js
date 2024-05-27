@@ -10,7 +10,7 @@ const funcionComentario = function (sequelize, dataTypes) {
         producto_id: {
             type: dataTypes.INTEGRER
         },
-        usuario_id: {
+        usuarios_id: {
             type: dataTypes.INTEGRER
         },
         comentario: {
