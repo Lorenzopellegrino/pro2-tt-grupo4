@@ -18,6 +18,15 @@ const funcionProducto = function (sequelize, dataTypes) {
         },
         descripcion_producto: {
             type: dataTypes.STRING
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
+        },
+        deletedAt: {
+            type: dataTypes.DATE
         }
 
     };
