@@ -9,10 +9,12 @@ const indexcontroller = {
         .catch(function (error) {
             console.log(error);
         })
-            
-        //return res.render('index', {title : 'Home', productos: db.productos})
     },
+
+    // return res.render('index', {title : 'Home', productos: db.productos})
+
     search: function(req, res){
+
         return res.render('search-results', {title: 'search results', productos : db.productos})
     }
 };
