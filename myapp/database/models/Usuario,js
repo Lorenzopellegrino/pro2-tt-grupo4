@@ -36,8 +36,8 @@ const funcionUsuario = function (sequelize, dataTypes) {
     
     let config = {
         tableName: "usuarios",
-        timestamps: false,
-        underscored: true
+        timestamps: true,
+        underscored: false
     };
 
         /* definir un modelo */

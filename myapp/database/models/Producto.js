@@ -7,16 +7,16 @@ const funcionProducto = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        usuarios_id: {
-            type: dataTypes.INTEGRER
+        usuariosId: {
+            type: dataTypes.INTEGER
         },
-        imagen_producto: {
+        imagenProducto: {
             type: dataTypes.STRING
         },
-        nombre_producto: {
+        nombreProducto: {
             type: dataTypes.STRING
         },
-        descripcion_producto: {
+        descripcionProducto: {
             type: dataTypes.STRING
         },
         createdAt: {
@@ -33,8 +33,8 @@ const funcionProducto = function (sequelize, dataTypes) {
     
     let config = {
         tableName: "productos",
-        timestamps: false,
-        underscored: true
+        timestamps: true,
+        underscored: false
     };
 
         /* definir un modelo */

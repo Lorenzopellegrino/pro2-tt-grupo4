@@ -7,11 +7,11 @@ const funcionComentario = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        producto_id: {
-            type: dataTypes.INTEGRER
+        productoId: {
+            type: dataTypes.INTEGER
         },
-        usuarios_id: {
-            type: dataTypes.INTEGRER
+        usuariosId: {
+            type: dataTypes.INTEGER
         },
         comentario: {
             type: dataTypes.STRING
@@ -29,8 +29,8 @@ const funcionComentario = function (sequelize, dataTypes) {
     
     let config = {
         tableName: "comentarios",
-        timestamps: false,
-        underscored: true
+        timestamps: true,
+        underscored: false
     };
 
         /* definir un modelo */
