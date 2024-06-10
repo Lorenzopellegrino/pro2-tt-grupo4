@@ -2,7 +2,7 @@ const db = require('../database/models');
 
 const indexcontroller = {
     index: function(req, res){
-        db.Producto.findAll()
+        db.Comentario.findAll()
         .then(function(result) {
             return res.send(result)
         })
