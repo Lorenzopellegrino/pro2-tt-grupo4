@@ -39,7 +39,7 @@ const funcionComentario = function (sequelize, dataTypes) {
 
     Comentario.associate = function(models) {
 
-        Comentario.belongsTo (models.Usuario , {
+        Comentario.belongsTo(models.Usuario , {
             as: "usuario",
             foreignKey : "usuariosId"
         });

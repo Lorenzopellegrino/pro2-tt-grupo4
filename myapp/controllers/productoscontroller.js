@@ -2,8 +2,16 @@ const db = require('../db/data');
 
 const productocontoller = {
     index: function(req, res){
+        let id = req.params.id;
+        let criterio = {
+            include: [
+            {association: "comentarios"},
+            {association: "usuario"}
+            ]
+        }
+        
 
-        db.productos.findByPk(id)
+        db.productos.findByPk(id, criterio)
         .then(function (results) {
            return res.send("OK")
            

@@ -1,10 +1,20 @@
 const db = require('../database/models');
+const op = db.Sequelize.Op;
 
 const indexcontroller = {
     index: function(req, res){
-        db.Usuario.findAll()
+        let filtrado = {
+            include: [
+                {association: "comentarios"},
+                {association: "usuario"}
+            ]
+        }
+
+
+        db.Producto.findAll(filtrado)
         .then(function(result) {
             return res.send(result)
+            return res.render("index", {title: "Home", productos: results});
         })
         .catch(function (error) {
             console.log(error);

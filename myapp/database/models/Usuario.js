@@ -46,13 +46,13 @@ const funcionUsuario = function (sequelize, dataTypes) {
 
     Usuario.associate = function(models) {
 
-        Usuario.hasMany (models.Comentario , {
+        Usuario.hasMany(models.Comentario , {
             as: "usuario",
             foreignKey : "usuariosId"
         });
 
-        Producto.hasMany(models.Producto, {
-            as: "comentarios" ,
+        Usuario.hasMany(models.Producto, {
+            as: "producto" ,
             foreignKey: "usuariosId"
         });
     }

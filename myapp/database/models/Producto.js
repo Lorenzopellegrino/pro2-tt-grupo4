@@ -43,7 +43,7 @@ const funcionProducto = function (sequelize, dataTypes) {
 
     Producto.associate = function(models) {
 
-        Producto.belongsTo (models.Usuario , {
+        Producto.belongsTo(models.Usuario , {
             as: "usuario",
             foreignKey : "usuariosId"
         });
