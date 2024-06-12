@@ -9,8 +9,6 @@ const productocontoller = {
             {association: "usuario"}
             ]
         }
-        
-
         db.productos.findByPk(id, criterio)
         .then(function (results) {
            return res.send("OK")
