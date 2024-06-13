@@ -1,6 +1,6 @@
 const db = require('../db/data');
 
-const productocontoller = {
+const productoContoller = {
     index: function(req, res){
         let id = req.params.id;
         let criterio = {
@@ -32,4 +32,4 @@ const productocontoller = {
         // return res.render('product-add' , {title : 'Agregar Producto' , usuario : db.usuario})
 }};
 
-module.exports = productocontoller;
+module.exports = productoContoller;

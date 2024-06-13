@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
 
-const indexcontroller = {
+const indexController = {
     index: function(req, res){
         let filtrado = {
             include: [
@@ -13,22 +13,36 @@ const indexcontroller = {
 
         db.Producto.findAll(filtrado)
         .then(function(result) {
-            return res.send(result)
-            return res.render("index", {title: "Home", productos: results});
+            //return res.send(result)
+            return res.render("index", {title: "Home", productos: result});
         })
         .catch(function (error) {
             console.log(error);
-        })
+        });
     },
 
     // return res.render('index', {title : 'Home', productos: db.productos})
 
     search: function(req, res){
+        let busqueda = req.query.search;
 
-        return res.render('search-results', {title: 'search results', productos : db.productos})
+        let filtrado = {
+            include: [
+                {association: "comentarios"},
+                {association: "usuario"}
+            ]
+        }
+
+        db.Producto.findAll(filtrado)
+        .then(function(result) {
+            return res.render('search-results', {title: `Resultados de la busqueda: ${busqueda}`, productos : result})
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     }
 };
 
 
-module.exports = indexcontroller;
+module.exports = indexController;
 
