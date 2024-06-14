@@ -1,6 +1,6 @@
 const db = require('../db/data');
 
-const userController = {
+const usercontroller = {
     login: function(req, res){
         return res.render("login", {title: "LOGIN"})
     },
@@ -15,5 +15,5 @@ const userController = {
     }
 };
 
-module.exports = userController;
+module.exports = usercontroller;
 

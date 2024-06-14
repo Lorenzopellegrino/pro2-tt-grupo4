@@ -1,6 +1,6 @@
 const db = require('../db/data');
 
-const productoContoller = {
+const productocontoller = {
     index: function(req, res){
         
         let id = req.params.id;
@@ -11,7 +11,7 @@ const productoContoller = {
             {association: "usuario"}
             ]
         }
-        
+
         db.productos.findByPk(id, criterio)
         .then(function (results) {
            return res.send("OK")
@@ -35,4 +35,4 @@ const productoContoller = {
         // return res.render('product-add' , {title : 'Agregar Producto' , usuario : db.usuario})
 }};
 
-module.exports = productoContoller;
+module.exports = productocontoller;

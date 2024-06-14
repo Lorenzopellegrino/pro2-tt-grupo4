@@ -1,7 +1,7 @@
 const db = require('../database/models');
 const op = db.Sequelize.Op;
 
-const indexController = {
+const indexcontroller = {
     index: function(req, res){
         let filtrado = {
             include: [
@@ -44,5 +44,5 @@ const indexController = {
 };
 
 
-module.exports = indexController;
+module.exports = indexcontroller;
 
