@@ -42,10 +42,25 @@ const usercontroller = {
                 let check = bcrypt.compareSync(form.password,result.password);
 
                 if (check){
-                    req.session.user
+                    req.session.user = result;
+                    if (form.rememberme != undefined){
+                        res.cookie("userId", result.id,{maxAge: 1000 * 60 * 35})
+                    }
+                    return res.redirect("/movies");
+                }else {
+                    return res.send("error en la contrasenia");
                 }
+            }else {
+                return res.send ("No hay email parecidos a :" + form.email);
             }
-        }
+        }).catch((err) => {
+            return console.log(err);
+        });
+    },
+    logout: function (req,res) {
+        req.session.destroy();
+        res.clearCookie("userId")
+        return res.redirect("/")
     },
     edit: function(req, res){
         res.render("profile-edit", {title: "EDIT", usuario: db.usuario})
