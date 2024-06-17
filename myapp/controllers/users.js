@@ -46,7 +46,7 @@ const usercontroller = {
                     if (form.rememberme != undefined){
                         res.cookie("userId", result.id,{maxAge: 1000 * 60 * 35})
                     }
-                    return res.redirect("/movies");
+                    return res.redirect("/users/profile");
                 }else {
                     return res.send("error en la contrasenia");
                 }
