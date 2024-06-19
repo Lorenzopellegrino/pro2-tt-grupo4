@@ -23,7 +23,30 @@ const usercontroller = {
     },
 
     profile: function(req, res){
-        res.render("profile", {title: "PROFILE", usuario: db.usuario, producto: db.productos})
+        let id = req.params.id;
+        
+        let criterio = {
+            include: [
+                {association: "productos"},
+                {association: "comentarios"}
+            ],
+            order: [[{model: db.Producto, as: "producto"}, "createdAt", "DESC"]]
+        }
+
+        db.Usuario.findByPk(id, criterio)
+        .then(function(results) {
+            let condition = false;
+
+            if (req.session.usuario != undefined && req.session.usuario.id == results.id){
+                condition = true;
+            }
+
+            return res.render("profile", {title: `@${results.usuario}`, usuario: results.usuario , producto: results.productos, comentarios: results.comentarios.length, condition: condition});
+        })
+        .catch(function (error){
+            console.log(error);
+        });
+        
     },
 
     store : function(req , res){
