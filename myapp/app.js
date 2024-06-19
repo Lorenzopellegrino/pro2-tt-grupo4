@@ -28,34 +28,33 @@ app.use(session({
   resave: false,
   saveUninitialized : true}));
 
-app.use(function(req,res,next){
-  if(req.session.user != undefined){
-    res.locals.user = req.session.user;
-  }
-}
-);
-
-app.user(function(req,res,next){
-  if(req.cookies.userId != undefined && req.session.user == undefined){
-    let id = req.cookies.userId;
-
-    db.Usuario.findByPk(id)
-    .then(function(result){
-      req.session.user = result;
-      res.locals.user = result;
-      return next();
+  app.use(function(req,res,next){
+    if(req.session.user != undefined){
+      res.locals.user = req.session.user;
     }
-    )
-    .catch(function(err){
-      return console.log(err);
-    }
-    );
-  }
-  else {
     return next()
-  }
-}
-);
+  });
+  
+  app.use(function(req,res,next){
+    if(req.cookies.userId != undefined && req.session.user == undefined){
+      let id = req.cookies.userId;
+  
+      db.Usuario.findByPk(id)
+      .then(function(result){
+        req.session.user = result;
+        res.locals.user = result;
+        return next();
+      }
+      )
+      .catch(function(err){
+        return console.log(err);
+      }
+      );
+    }
+    else {
+      return next()
+    }
+  });
 
 
 app.use('/', indexRouter);
