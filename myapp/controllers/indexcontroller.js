@@ -31,7 +31,7 @@ const indexcontroller = {
             where: {
                 [op.or] :[
                     {nombreProducto:{[op.like]: "%" + busqueda + "%"}},
-                    {descripcion:{[op.like]: "%" + busqueda + "%"}}
+                    {descripcionProducto:{[op.like]: "%" + busqueda + "%"}}
                 ]
             },
             order:[["createdAt" , "DESC"]],

@@ -6,7 +6,7 @@ const {validationResult} = require('express-validator');
 
 const usercontroller = {
     login: function(req, res, next){
-        if (req.session.usuario != undefined) {
+        if (req.session.user != undefined) {
             return res.redirect("/")
         }
         else{
@@ -14,7 +14,7 @@ const usercontroller = {
         }
     },
     register: function(req, res, next){
-        if (req.session.usuario != undefined) {
+        if(req.session.user != undefined) {
             return res.redirect("/")
         }
         else{
