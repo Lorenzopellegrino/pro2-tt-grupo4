@@ -19,9 +19,16 @@
             <form class="formulario" action="/users/profile" method="get">
                 <label class="form-label" for="email">Email</label><br>
                 <input class="form-input" type="email" id="email" name="email" required><br>
+                <% if (locals.errors && errors.email) { %>
+					<p class = "feedback"><%= errors.email.msg %></p>
+					<% } %>
                 
                 <label class="form-label" for="password">Contraseña</label><br>
                 <input class="form-input" type="password" name="password" id="password" required><br>
+                <% if (locals.errors && errors.password) { %>
+					<p class = "feedback"><%= errors.password %></p>
+					<% } %>
+
                 <div class="div-recordar">
                     <label class="formulario-label" for="remember">Recordarme</label><br>
                     <input class="recordar" type="checkbox" id="remember" name="remember">
