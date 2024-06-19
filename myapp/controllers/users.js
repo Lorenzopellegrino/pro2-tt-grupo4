@@ -70,7 +70,7 @@ const usercontroller = {
 
     loginUser: function(req,res) {
         let form = req.body;
-        let errors = validationResult(req);
+        let errors = validationResult(req); // Terminar
 
         let filtro = {
             where: [{email:form.email}]
