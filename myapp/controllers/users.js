@@ -80,11 +80,13 @@ const usercontroller = {
         .then((result) => {
             if (result != null){
                 req.session.usuario = result;
-                return res.redirect("/")
-                
+                if (form.remember != undefined){
+                    res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
+                }
+                return res.redirect("/")   
             }
             else{
-                return res.send("No se a encontrado el mail :" + form.email)
+                return res.redirect("/users/login");
             }
         }).catch((err) => {
             return console.log(err);
