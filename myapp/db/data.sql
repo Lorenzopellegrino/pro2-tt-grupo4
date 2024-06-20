@@ -1,4 +1,3 @@
-drop schema myapp;
 CREATE SCHEMA myapp;
 
 USE myapp;
