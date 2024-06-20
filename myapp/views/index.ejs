@@ -35,7 +35,7 @@
 							  <article class="product-box_data">
 								  <h2><%= productos[index].nombreProducto %></h2>
 								  <p><%= productos[index].descripcionProducto %></p>
-								  <p>Comentarios: <%= productos[index].comentarios %></p>
+								  <p>Comentarios: <%= productos[index].comentarios.length %></p>
 								  <p>Dueño: <a href="/users/profile/id/<%-productos[index].usuario.id %>"><%=productos[index].usuario.nombre %></a> </p>
 							</article>
 						</a>
@@ -62,7 +62,7 @@
 							<article class="product-box_data">
 								<h2><%= productos[index].nombreProducto %></h2>
 								<p><%= productos[index].descripcionProducto %></p>
-								<p>Comentarios: <%= productos[index].comentario.length %></p>
+								<p>Comentarios: <%= productos[index].comentarios.length %></p>
 								<p>Dueño: <a href="/users/profile/id/<%-productos[index].usuario.id %>"><%=productos[index].usuario.nombre %></a> </p>
 						  </article>
 						</a>
