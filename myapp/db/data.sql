@@ -57,21 +57,21 @@ VALUES (DEFAULT, 'sofia19@gmail.com', "sofia", '1234', '2004-12-16', '46293228',
 /*SQL PRODUCTOS*/
 
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 5, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarcadegol.com%2F2014%2F05%2Finedito-nike-lanza-camiseta-homenaje-a-sus-20-anos-junto-al-arsenal%2Farsenal-nike-2002_03%2F&psig=AOvVaw2qmm5-E811VrWuwvS61Rwt&ust=1719059996764000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLj3xezb7IYDFQAAAAAdAAAAABAE', 'Arsenal Local - 2005', 'Camiseta historica del conjunto Gunner, muchos se acordaran de Hienry al verla');
+VALUES (DEFAULT, 5, 'https://acortar.link/gmdmNN', 'Arsenal Local - 2005', 'Camiseta historica del conjunto Gunner, muchos se acordaran de Hienry al verla');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 1, 'https://www.google.com/url?sa=i&url=http%3A%2F%2Fisgb.edu.ar%2Fbarcelona-suplente-2008-09-%25E2%259C%2588%25EF%25B8%258F-cc-34015907&psig=AOvVaw3vfFsacODHyNkyUyJ7yI55&ust=1719060039030000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjq5Z3e7IYDFQAAAAAdAAAAABAE', 'Barcelona Alternativa - 2009', 'Iconica remera donde el conjunto dirigido por Pep Guardiola logro el primer sextete de la historia del futbol');
+VALUES (DEFAULT, 1, 'https://acortar.link/tHnnMq', 'Barcelona Alternativa - 2009', 'Iconica remera donde el conjunto dirigido por Pep Guardiola logro el primer sextete de la historia del futbol');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 2, 'camiseta3', 'camiseta3', 'descripcion del producto');
+VALUES (DEFAULT, 2, 'https://acortar.link/syFPJL', 'Manchester United Local - 2008', 'Muchos recordaran a un joven Ronaldo volando por los aires en su primera final de champions');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 3, 'camiseta4', 'camiseta4', 'descripcion del producto');
+VALUES (DEFAULT, 3, 'https://acortar.link/fREUVq', 'Manchester City Local - 2023', 'Remera que logro la primera champions en la historia del City, de la mano de Pep Guardiola');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 4, 'https://www.google.com/url?sa=i&url=http%3A%2F%2Fisgb.edu.ar%2Fcamiseta-argentina-1986-local-cc-11924950&psig=AOvVaw0j5K1CpBCaBDofQFjXs6dM&ust=1719060859688000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOi3-IHf7IYDFQAAAAAdAAAAABAE', 'Argentina Local - 1986', 'Gloriosa remera Argentina que en Mexico logro dar la vuelta y convertirse por segunda vez en campeon mundial ');
+VALUES (DEFAULT, 4, 'https://acortar.link/x51vQR', 'Argentina Local - 1986', 'Gloriosa remera Argentina que en Mexico logro dar la vuelta y convertirse por segunda vez en campeon mundial ');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 1, 'camiseta6', 'camiseta6', 'descripcion del producto');
+VALUES (DEFAULT, 1, 'https://acortar.link/tjxFqp', 'Milan Visitante - 2007', 'El conjunto Italiano logro una champions con esta remera, donde un joven jugador brasileño logro dejarla marcada en la historia ¿Sabes quien es? Comentalo!');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 2, 'camiseta7', 'camiseta7', 'descripcion del producto');
+VALUES (DEFAULT, 2, 'https://acortar.link/ZapqIH', 'Real Madrid Alternativa - 2018', 'CR7 logro hacer el mejor gol de su carrera con esta remera');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 3, 'camiseta8', 'camiseta8', 'descripcion del producto');
+VALUES (DEFAULT, 3, 'https://acortar.link/RijfLh', 'Liverpool Local - 2005', 'Remera que dio al mejor partido de futbol para muchos, imposible no recordarse de esa iconica remontada al Milan para lograr ganar la Final');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
 VALUES (DEFAULT, 4, 'camiseta9', 'camiseta9', 'descripcion del producto');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
@@ -80,60 +80,60 @@ VALUES (DEFAULT, 5, 'camiseta10', 'camiseta10', 'descripcion del producto');
 /*SQL COMENTARIOS*/
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 1, 5, "comentario");
+VALUES (DEFAULT, 1, 5, "Hermosa");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 1, 3, "comentario");
+VALUES (DEFAULT, 1, 3, "Muy Buena");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 1, 4, "comentario");
+VALUES (DEFAULT, 1, 4, "Que linda");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 2, 1, "comentario");
+VALUES (DEFAULT, 2, 1, "Que recuerdos");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 2, 4, "comentario");
+VALUES (DEFAULT, 2, 4, "La QUIEROOO");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 2, 4, "comentario");
+VALUES (DEFAULT, 2, 4, "Recomendada");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 3, 3, "comentario");
+VALUES (DEFAULT, 3, 3, "La compre y es la mejor");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 3, 1, "comentario");
+VALUES (DEFAULT, 3, 1, "Perfecta");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 3, 5, "comentario");
+VALUES (DEFAULT, 3, 5, "Linda");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 4, 1, "comentario");
+VALUES (DEFAULT, 4, 1, "Hermosa");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 4, 1, "comentario");
+VALUES (DEFAULT, 4, 1, "10/10");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 4, 2, "comentario");
+VALUES (DEFAULT, 4, 2, "Puffff");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 5, 5, "comentario");
+VALUES (DEFAULT, 5, 5, "Sin palabras");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 5, 3, "comentario");
+VALUES (DEFAULT, 5, 3, "Que detalles!!");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 5, 3, "comentario");
+VALUES (DEFAULT, 5, 3, "Muy buena");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 6, 2, "comentario");
+VALUES (DEFAULT, 6, 2, "Que mas decir");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 6, 2, "comentario");
+VALUES (DEFAULT, 6, 2, "Iconica");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
 VALUES (DEFAULT, 6, 3, "comentario");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 7, 4, "comentario");
+VALUES (DEFAULT, 7, 4, "Perfecta");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 7, 1, "comentario");
+VALUES (DEFAULT, 7, 1, "Hermosa");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 7, 1, "comentario");
+VALUES (DEFAULT, 7, 1, "Linda");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 8, 2, "comentario");
+VALUES (DEFAULT, 8, 2, "Ese color!");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 8, 2, "comentario");
+VALUES (DEFAULT, 8, 2, "recomendable");
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
-VALUES (DEFAULT, 8, 5, "comentario");
+VALUES (DEFAULT, 8, 5, "sin duda la mejor");
 
 INSERT INTO comentarios (id, productoId, usuariosId, comentario)
 VALUES (DEFAULT, 9, 5, "comentario");
