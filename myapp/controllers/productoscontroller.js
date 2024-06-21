@@ -21,6 +21,7 @@ const productocontoller = {
         })
         // return res.render('product', {title : 'Detalle Producto' , productos : db.productos})
     },
+    
 
     add: function(req, res){
 

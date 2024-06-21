@@ -57,15 +57,15 @@ VALUES (DEFAULT, 'sofia19@gmail.com', "sofia", '1234', '2004-12-16', '46293228',
 /*SQL PRODUCTOS*/
 
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 5, 'camiseta1', 'camiseta1', 'descripcion del producto');
+VALUES (DEFAULT, 5, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarcadegol.com%2F2014%2F05%2Finedito-nike-lanza-camiseta-homenaje-a-sus-20-anos-junto-al-arsenal%2Farsenal-nike-2002_03%2F&psig=AOvVaw2qmm5-E811VrWuwvS61Rwt&ust=1719059996764000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLj3xezb7IYDFQAAAAAdAAAAABAE', 'Arsenal Local - 2005', 'Camiseta historica del conjunto Gunner, muchos se acordaran de Hienry al verla');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 1, 'camiseta2', 'camiseta2', 'descripcion del producto');
+VALUES (DEFAULT, 1, 'https://www.google.com/url?sa=i&url=http%3A%2F%2Fisgb.edu.ar%2Fbarcelona-suplente-2008-09-%25E2%259C%2588%25EF%25B8%258F-cc-34015907&psig=AOvVaw3vfFsacODHyNkyUyJ7yI55&ust=1719060039030000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMjq5Z3e7IYDFQAAAAAdAAAAABAE', 'Barcelona Alternativa - 2009', 'Iconica remera donde el conjunto dirigido por Pep Guardiola logro el primer sextete de la historia del futbol');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
 VALUES (DEFAULT, 2, 'camiseta3', 'camiseta3', 'descripcion del producto');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
 VALUES (DEFAULT, 3, 'camiseta4', 'camiseta4', 'descripcion del producto');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
-VALUES (DEFAULT, 4, 'camiseta5', 'camiseta5', 'descripcion del producto');
+VALUES (DEFAULT, 4, 'https://www.google.com/url?sa=i&url=http%3A%2F%2Fisgb.edu.ar%2Fcamiseta-argentina-1986-local-cc-11924950&psig=AOvVaw0j5K1CpBCaBDofQFjXs6dM&ust=1719060859688000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOi3-IHf7IYDFQAAAAAdAAAAABAE', 'Argentina Local - 1986', 'Gloriosa remera Argentina que en Mexico logro dar la vuelta y convertirse por segunda vez en campeon mundial ');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
 VALUES (DEFAULT, 1, 'camiseta6', 'camiseta6', 'descripcion del producto');
 INSERT INTO productos (id, usuariosId, imagenProducto, nombreProducto, descripcionProducto)
