@@ -15,10 +15,21 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= productos[0].nombre %></h2> 
-			<p class="product-detail-description">
-				<a href="/product/add">Editar</a>
+			<h2 class="products-title"><%= productos.nombreProducto %></h2> 
+			<% if (condition) {%>
+				<p class="product-detail-description">
+				<form action="/product/edit" method="post">
+					<input type="hidden" name="id" value="<%= productos.id %>">
+					<button class="btn-special btn-red" type="submit"><a>Editar</a></button>
+				</form>
+				<form action="/product/delete" method="post">
+					<input type="hidden" name="id" value="<%= productos.id %>">
+					<input type="hidden" name="idUsuario" value="<%= productos.usuario.id %>">
+					<button class="btn-special btn-red" type="submit"><a>Eliminar</a></button>
+				</form>
 			</p>
+			<% } %>
+			
 		</div>
 
 		<div class="product-detail">
