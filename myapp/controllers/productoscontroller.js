@@ -108,8 +108,16 @@ const productocontoller = {
                     {association: "usuario"}
                 ]
             }
+            db.Producto.findByPk(form.id, criterio)
+            .then(function(result) {
+                return res.render("product-edit", {title: "Editar Producto", errors: errors.mapped(), old: req.body, productos: result})
+            })
+            .catch((err) => {
+                return console.log(err);
+            })
         }
     },
+
 
     delete: function(req, res) {
         let form = req.body;
