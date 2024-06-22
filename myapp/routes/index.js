@@ -1,4 +1,3 @@
-
 const express = require('express');
 const router = express.Router();
 const indexcontroller = require('../controllers/indexcontroller');

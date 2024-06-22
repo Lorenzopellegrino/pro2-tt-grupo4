@@ -18,7 +18,6 @@ const productocontoller = {
             ["comentario", "createdAt", "DESC"]
         ]
         };
-
         db.Producto.findByPk(id, criterio)
         .then(function (results) {
             let condition = false;
