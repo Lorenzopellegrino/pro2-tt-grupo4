@@ -84,7 +84,7 @@ const productocontoller = {
                   id:form.id
                 }  
               }  
-        }
+
             if (req.session.user != undefined ){
                 let id = req.session.user.id;
                 if (form.usuarioId == id) {
@@ -102,16 +102,15 @@ const productocontoller = {
              else {
                 return res.redirect ("/users/login");
         } 
-    }
-        else (
+        }
+        else {
             let criterio = {
                 include: [
                     {association: "usuario"}
                 ]
             }
-        )
-        },
-        
+        }
+    },
 
     delete: function(req, res) {
         let form = req.body;
