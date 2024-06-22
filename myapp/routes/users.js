@@ -5,6 +5,7 @@ const {body} = require("express-validator");
 const db = require ("../database/models");
 const session = require('express-session');
 const bcrypt = require("bcryptjs");
+const usercontroller = require('../controllers/users');
 
 let validationsLogin = [
     body('email')
@@ -60,16 +61,35 @@ let validationRegister = [
     }),
 
     body('username')
-    .notEmpty()
+    .notEmpty().withMessage("Introduzca su nombre de usuario."),
 
+    body('password')
+    .notEmpty().withMessage("Este campo es obligatorio.").bail()
+        .isLength({min: 4}).withMessage("La contraseña debe tener al menos 4 caracteres.") 
 ]
 
+let validationEdit = [
+    body("mail")
+    .notEmpty().withMessage("Este campo es obligatorio.").bail()
+    .isEmail().withMessage("Debe ser un email valido.").bail(),
+
+    body("usuario")
+    .isEmpty().withMessage("El campo es obligatorio.").bail()
+    .isLength({ min:4 }).withMessage("La contraseña debe tener al menos 4 caracteres.")
+]
+
+
 router.get('/login', userscontroller.login);
+routee.post("/login", validationsLogin, userscontroller.loginUser);
 
 router.get('/register', userscontroller.register);
+router.post("/register", validationRegister, userscontroller.store)
 
 router.get('/profile', userscontroller.profile);
 
 router.get('/edit', userscontroller.edit);
+router.post("/edit", validationEdit, userscontroller.update);
+
+router.post("/logout", userscontroller.logout);
 
 module.exports = router;
