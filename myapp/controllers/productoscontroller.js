@@ -76,13 +76,38 @@ const productocontoller = {
     },
 
     update: function(req, res) {
+        let form = req.body;
+        let errors = validationResult(req);
+
+        let filtro = {
+          where: {
+            id:form.id
+          }  
+        }
+        if (req.session.user != undefined ){
+            let id = req.session.user.id;
+            if (form.usuarioId == id) {
+                db.Producto.update (form, filtro)
+                .then((result) => {
+                    return res.redirect("/product/id/" + form.id)
+                }).catch((err) => {
+                    return console.log(err);
+                });
+            }
+            else {
+                return res.redirect("/users/profile/id/" + id);
+            }
+            }
+        else {
+            return res.redirect ("/users/login");
+        } 
+        },
         
-    },
 
     delete: function(req, res) {
         let form = req.body;
 
-        let filtrado = {
+        let filtro = {
             where: {
                 id: form.id
             }
@@ -92,7 +117,7 @@ const productocontoller = {
         if (req.session.usuario != undefined) {
             let id = req.session.usuario.id;
             if (form.idUsuario == id) {
-                db.Producto.destroy(filtrado)
+                db.Producto.destroy(filtro)
                 .then((result) => {
                     return res.redirect("/");
                 }).catch((error) => {
@@ -151,4 +176,5 @@ const productocontoller = {
         }
     }
 }
+
 module.exports = productocontoller;
