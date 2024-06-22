@@ -78,29 +78,38 @@ const productocontoller = {
     update: function(req, res) {
         let form = req.body;
         let errors = validationResult(req);
-
-        let filtro = {
-          where: {
-            id:form.id
-          }  
+        if (errors.isEmpty()){
+            let filtro = {
+                where: {
+                  id:form.id
+                }  
+              }  
         }
-        if (req.session.user != undefined ){
-            let id = req.session.user.id;
-            if (form.usuarioId == id) {
-                db.Producto.update (form, filtro)
-                .then((result) => {
-                    return res.redirect("/product/id/" + form.id)
-                }).catch((err) => {
-                    return console.log(err);
-                });
+            if (req.session.user != undefined ){
+                let id = req.session.user.id;
+                if (form.usuarioId == id) {
+                    db.Producto.update (form, filtro)
+                    .then((result) => {
+                        return res.redirect("/product/id/" + form.id)
+                    }).catch((err) => {
+                        return console.log(err);
+                    });
+                }
+                else {
+                    return res.redirect("/users/profile/id/" + id);
             }
-            else {
-                return res.redirect("/users/profile/id/" + id);
             }
-            }
-        else {
-            return res.redirect ("/users/login");
+             else {
+                return res.redirect ("/users/login");
         } 
+    }
+        else (
+            let criterio = {
+                include: [
+                    {association: "usuario"}
+                ]
+            }
+        )
         },
         
 
