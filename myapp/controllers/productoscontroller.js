@@ -25,7 +25,7 @@ const productocontoller = {
             if (req.session.usuario != undefined && req.session.usuario.id == results.usuario.id) {
                 condition = true;
             }
-            return res.render('product', {title : 'Detalle Producto' , productos: results, comentarios: results.comentarios, condition: condition})
+            return res.render('product', {title : 'Detalle Producto' , productos: results, condition: condition})
            
         }).catch(function(respuestaNegativa) {
             console.log(respuestaNegativa);
