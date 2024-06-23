@@ -22,9 +22,10 @@
         </div>
     </div>
     <div class="container products-wrapper">
-    <div class="row">
+        <div class="row">
 			<!-- Show the "ultimos" products -->
-			<%for(let index = 0; index < 8; index++) {%>
+			<% if (productos && productos.length > 0) {
+                for(let index = 0; index < 8; index++) {%>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <section class="product-box">
                         <a href="/product">
@@ -35,10 +36,14 @@
                                 <h2><%= productos[index].nombre %></h2>
                                 <p><%= productos[index].descripcion %></p>
                                 <p>Comentarios: <%= productos[index].comentarios.length %></p>
+                                <p> Dueño: <a href="/users/profile/id<%= productos[i].usuario.usuario%>"><%= productos[i<.usuario.usuario%> </a></p>
                             </article>
                         </a>
                     </section>
                 </div>
+                <% }
+            } else { %>
+                <h2>No se encuentra un producto que coincida con tu busqueda.</h2>
             <%}%>
         </div>
     </div>
