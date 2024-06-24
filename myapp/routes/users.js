@@ -85,7 +85,7 @@ router.post("/login", validationsLogin, usercontroller.loginUser);
 router.get('/register', usercontroller.register);
 router.post("/register", validationRegister, usercontroller.store)
 
-router.get('/profile', usercontroller.profile);
+router.get('/profile/id/:id', usercontroller.profile);
 
 router.get('/edit', usercontroller.usersEdit);
 router.post("/edit", validationEdit, usercontroller.update);

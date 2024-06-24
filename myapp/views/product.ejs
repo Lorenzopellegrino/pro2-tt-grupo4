@@ -18,7 +18,7 @@
 			<h2 class="products-title"><%= productos.nombreProducto %></h2> 
 			<% if (condition) {%>
 				<p class="product-detail-description">
-					<form action="/product/edit" method="post">
+					<form action="/product/editProduct" method="post">
 						<input type="hidden" name="id" value="<%= productos.id%>">
 						<button class="btn-special btn-red" type="submit"><a>Editar</a></button>
 					</form>
@@ -33,7 +33,8 @@
 			
 		</div>
 		<%if (!condition) { %>
-				<p class="user">Dueño: <a  href="/users/profile/id/<%= productos.usuario.id%>">@<%= productos.usuario.nombre%></a></p>
+				<p class="user">Dueño: <a  href="/users/profile/id/<%= productos.usuario.id%>">@<%= productos.usuario.usuario%></a></p>
+			<% } %>
 
 		<div class="product-detail">
 			<div class="row">
@@ -45,11 +46,11 @@
 				
     		 	<div class="col-12 col-lg-4">
             		<section class="comments">
-                		<% for(let index = 0; index < .comentarios.length; index++) {%>
+                		<% for(let index = 0; index < comentarios.length; index++) {%>
 							<article>
-								<img src=<%= comentarios[index].nombre.fotoperfil %> alt="">
+								<img src=<%= comentarios[index].usuario.fotoperfil %> alt="">
 								<div class="info">
-									<p class="usuario"> <strong> <a href="/users/profile/id%<%=comentarios[index].nombre.id%>"><%= comentarios[index].usuario.usuario%></a></strong>
+									<p class="usuario"> <strong> <a href="/users/profile/id%<%=comentarios[index].usuario.id%>"><%= comentarios[index].usuario.usuario%></a></strong>
 										<%=	comentarios[index].comentario%>
 									</p>
 								</div>

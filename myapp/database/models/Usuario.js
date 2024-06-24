@@ -10,7 +10,7 @@ const funcionUsuario = function (sequelize, dataTypes) {
         email: {
             type: dataTypes.STRING
         },
-        nombre: {
+        usuario: {
             type: dataTypes.STRING
         },
         contrasenia: {
@@ -50,13 +50,13 @@ const funcionUsuario = function (sequelize, dataTypes) {
     Usuario.associate = function(models) {
 
         Usuario.hasMany(models.Comentario , {
-            as: "usuario",
-            foreignKey : "usuariosId"
+            as: "comentarios",
+            foreignKey : "usuarioId"
         });
 
         Usuario.hasMany(models.Producto, {
-            as: "producto" ,
-            foreignKey: "usuariosId"
+            as: "productos" ,
+            foreignKey: "usuarioId"
         });
     }
 

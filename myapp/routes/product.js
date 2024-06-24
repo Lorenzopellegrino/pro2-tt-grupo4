@@ -25,8 +25,8 @@ router.post("/id/:id", validationsComentario, productoscontroller.comment)
 router.get('/add', productoscontroller.add);
 router.post("/add", validations, productoscontroller.store);
 
-router.post("/edit", productoscontroller.edit);
-router.post("/editar", validations, productoscontroller.update);
+router.post("/editProduct", productoscontroller.edit);
+router.post("/edit", validations, productoscontroller.update);
 
 router.post("/delete", productoscontroller.delete)
 

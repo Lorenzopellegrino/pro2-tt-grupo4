@@ -22,7 +22,7 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			
-            <form class="formulario" action="/users/profile" method="get">
+            <form class="formulario" action="/users/profile" method="post">
                 <label class="form-label" for="email">Email</label><br>
                 <input class="form-input" type="email" id="email" name="email" required><br>
                 <% if (locals.errors && errors.email) { %>

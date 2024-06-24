@@ -135,7 +135,7 @@ const usercontroller = {
 
         if (errors.isEmpty()) {
 
-            let filtrado = {
+            let filtro = {
                 where: {
                 id: req.session.user.id
                 }
@@ -150,7 +150,7 @@ const usercontroller = {
                 fotodeperfil: form.fotodeperfil 
             }
     
-            db.Usuario.update(usuario, filtrado)
+            db.Usuario.update(usuario, filtro)
             .then((result) => {
                 return res.redirect("/users/login")
             })

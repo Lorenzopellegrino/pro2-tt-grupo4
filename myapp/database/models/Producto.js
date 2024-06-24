@@ -7,7 +7,7 @@ const funcionProducto = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        usuariosId: {
+        usuarioId: {
             type: dataTypes.INTEGER
         },
         imagenProducto: {
@@ -45,7 +45,7 @@ const funcionProducto = function (sequelize, dataTypes) {
 
         Producto.belongsTo(models.Usuario , {
             as: "usuario",
-            foreignKey : "usuariosId"
+            foreignKey : "usuarioId"
         });
 
         Producto.hasMany(models.Comentario, {

@@ -25,10 +25,10 @@
 			<div class="col-12">
 				<h2 class="products-title">Novedades</h2>
 			</div>
-			<% for (let index = 0; index < 8 ; index ++){ %>
+			<% for (let index = 0; index < productos.length ; index ++){ %>
 				  <div class= "col-12 col-sm-6 col-lg-3">
 					  <section class= "product-box">
-						  <a href="/product">
+						  <a href="/product/id/<%= productos[index].id %>">
 							  <figure class="product-box_image">
 								  <img class="foto-index" src="<%= productos[index].imagenProducto %>">
 							  </figure>
@@ -55,7 +55,7 @@
 			<% for (let index = 0; index < 8 ; index ++){ %>
 				<div class= "col-12 col-sm-6 col-lg-3">
 					<section class= "product-box">
-						<a href="/product">
+						<a href="/product/id/<%= productos[index].id %>">
 							<figure class="product-box_image" >
 								<img class="foto-index" src= <%=productos[index].imagenProducto%> >
 							</figure>

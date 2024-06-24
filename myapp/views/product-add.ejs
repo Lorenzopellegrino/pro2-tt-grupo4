@@ -22,26 +22,27 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			<h2 class="col-12"></h2>
-            <form class="fromulario" action="/users/profile" method="get">
+            <form class="formulario" action="/product/add" method="post">
+				<input type="hidden" name="usuarioId" value="<%= locals.user.id %>">
                 <label class="form-label" for="imagen">Imagen del Producto</label><br>
                 <input class="form-input" type="file" id="imagen" name="imagen" value="<%= (locals.old && locals.old.imagen != undefined) ? locals.old.imagen : (usuario & usuario.imagen) %>" required><br>
 
 				<% if (locals.errors && locals.errors.imagen) { %>
-					<p><% locals.errors.imagen.msg %></p>
+					<p><% locals.errors.imagenProducto.msg %></p>
 				<% } %>
 
                 <label class="form-label" for="nombre">Nombre del Producto</label><br>
                 <input class="form-input" type="text" id="nombre" name="nombre" value="<%= (locals.old && locals.old.nombre != undefined) ? locals.old.nombre : (usuario & usuario.nombre) %>" required><br>
 
 				<% if (locals.errors && locals.errors.nombre) { %>
-					<p><% locals.errors.nombre.msg %></p>
+					<p><% locals.errors.nombreProducto.msg %></p>
 				<% } %>
 
                 <label class="form-label" for="descripcion">Descripción del Producto</label><br>
                 <textarea class="form-input" type="text" id="descripcion" name="descripcion" value="<%= locals.old !== undefined && old.descripcion ? old.descripcion: ""%>" </textarea>" <br>
 
 				<% if (locals.errors && locals.errors.descripcion) { %>
-					<p><% locals.errors.descripcion.msg %></p>
+					<p><% locals.errors.descripcionProducto.msg %></p>
 				<% } %>
 
                 <button class="buy-now-button" type="submit">Agregar Producto</button>
