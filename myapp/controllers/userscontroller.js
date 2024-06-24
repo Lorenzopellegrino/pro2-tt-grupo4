@@ -5,7 +5,6 @@ const {validationResult} = require('express-validator');
 const {update} = require('./productoscontroller');
 
 
-
 const usercontroller = {
     
     register: function(req, res, next){
