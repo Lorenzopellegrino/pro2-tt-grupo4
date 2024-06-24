@@ -51,41 +51,46 @@ const usercontroller = {
         }
 
     },  
-    loginUser: function(req,res, next) {
-
+    loginUser: function(req, res, next) {
         let form = req.body;
-        
         let errors = validationResult(req); 
-        
+    
         if (errors.isEmpty()){
             let filtro = {
-                where: [{email: form.email}]
+                where: [
+                    { mail: form.email}
+                ]
+        
             };
-
+    
             db.Usuario.findOne(filtro)
-             .then((result) => {
+            .then((result) => {
                 if (result != null){
-                    
+                    let check = bcrypt.compareSync(form.password, result.contrasenia);
+                    if (check) {
                         req.session.user = result;
                         if (form.remember != undefined){
-                            res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
+                            res.cookie("usuarioId",result.id,{maxAge: 1000 * 60 * 35})
                         }
                         return res.redirect("/users/profile/id/" + result.id);
-                        }
-                    else{
-                            return res.redirect("/users/login");
-                        }
-            }).catch((err) => {
+                    } else {
+                        return res.redirect("/users/login");
+                    }
+                } else {
+                    return res.send("No hay mails parecidos a: " + form.email);
+                }                       
+            })
+            .catch((err) => {
                 return console.log(err);
             });
         }
-        else{
+        else {
             res.render('login' , {title: 'Login' , errors: errors.mapped(), old: req.body, user: req.session.user});
         }
     },
     logout: function (req,res,next) {
         req.session.destroy();
-        res.clearCookie("userId")
+        res.clearCookie("usuarioId")
         return res.redirect("/")
     },
     profile: function(req, res, next){

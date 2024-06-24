@@ -7,7 +7,7 @@ const funcionUsuario = function (sequelize, dataTypes) {
             primaryKey: true,
             type: dataTypes.INTEGER
         },
-        email: {
+        mail: {
             type: dataTypes.STRING
         },
         usuario: {

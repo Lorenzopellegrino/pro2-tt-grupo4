@@ -34,7 +34,7 @@
 					<% } %>
 
 				<label class="form-label" for="password">Ingrese su nueva contraseña</label><br>
-				<input class="form-input" type="text" id="password" name="password" placeholder="contraseña" ><br>
+				<input class="form-input" type="password" id="password" name="password" placeholder="contraseña" ><br>
 				<% if (locals.errors && errors.password) { %>
 					<p class = "feedback"><%= errors.password.msg %></p>
 					<% } %>
