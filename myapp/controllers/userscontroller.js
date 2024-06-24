@@ -2,7 +2,7 @@ const db = require('../database/models');
 const bcrypt = require("bcryptjs");
 const op = db.Sequelize.Op;
 const {validationResult} = require('express-validator');
-const { update } = require('./productoscontroller');
+const {update} = require('./productoscontroller');
 
 
 
@@ -25,8 +25,11 @@ const usercontroller = {
         }
     },
     store : function(req , res){
+
         let form = req.body;
+        
         let errors = validationResult(req);
+        
         if (errors.isEmpty()){
             let usuario = {
                 email:form.email,
@@ -49,8 +52,11 @@ const usercontroller = {
 
     },  
     loginUser: function(req,res, next) {
+
         let form = req.body;
+        
         let errors = validationResult(req); 
+        
         if (errors.isEmpty()){
             let filtro = {
                 where: [{email: form.email}]
@@ -88,6 +94,7 @@ const usercontroller = {
         return res.redirect("/")
     },
     profile: function(req, res, next){
+
         let id = req.params.id;
         
         let criterio = {
@@ -100,13 +107,14 @@ const usercontroller = {
 
         db.Usuario.findByPk(id, criterio)
         .then(function(results) {
+
             let condition = false;
 
             if (req.session.user != undefined && req.session.user.id == results.id){
                 condition = true;
             }
 
-            return res.render("profile", {title: `@${results.usuario}`, usuario: results.usuario , producto: results.productos, comentarios: results.comentarios.length, condition: condition});
+            return res.render("profile", {title: `@${results.usuario}`, usuario: results , productos: results.productos, comentarios: results.comentarios.length, condition: condition});
         })
         .catch(function (error){
             console.log(error);
@@ -116,6 +124,7 @@ const usercontroller = {
     usersEdit: function(req, res, next) {
 
         if (req.session.user != undefined) {
+
             let id = req.session.user.id;
 
             db.Usuario.findByPk(id)
@@ -132,7 +141,9 @@ const usercontroller = {
 
     },
     update: function (req, res) {
+
         let errors = validationResult(req);
+        
         let form = req.body;
 
         if (errors.isEmpty()) {
@@ -166,8 +177,6 @@ const usercontroller = {
         
     }
 };
-
-
 
 module.exports = usercontroller;
 
