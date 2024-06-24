@@ -43,7 +43,7 @@ const productocontoller = {
         } else {
             return res.redirect("/users/login")
         }
-},
+    },
 
     store: function(req, res) {
         let form = req.body;
@@ -69,6 +69,7 @@ const productocontoller = {
             include: [
                 {association: "usuario"}
             ]}
+
             db.Producto.findByPk(form.id, criterio)
             .then(function (results) {
                 return res.render("product-edit", {title: `Editar producto ${results.nombreProducto}`, productos: results})
@@ -145,8 +146,10 @@ const productocontoller = {
             } else {
                 return res.redirect("/users/profile/id" + id);
             }
-        } else {
-            return res.redirect("/users/login");
+            
+        } 
+            else {
+                return res.redirect("/users/login");
         }
     },
 
@@ -186,14 +189,14 @@ const productocontoller = {
                     condition = true;                   
                 }
 
-                return res.render("producto", {title: "Producto", productos: results, comentarios: results.comentarios, condition: condition }) // errors: errors.mapped(), old: req.body
+                return res.render("producto", {title: "Producto", productos: results, comentarios: results.comentarios, condition: condition ,errors: errors.mapped() , old: req.body }) })
                 
                 .catch(function(error) {
                     return console.log(error);
-                })
-            })
+                });
+            }
         }
-    }
-}
+    };
+
 
 module.exports = productocontoller;

@@ -10,7 +10,7 @@ const funcionComentario = function (sequelize, dataTypes) {
         productoId: {
             type: dataTypes.INTEGER
         },
-        usuariosId: {
+        usuarioId: {
             type: dataTypes.INTEGER
         },
         comentario: {
@@ -41,7 +41,7 @@ const funcionComentario = function (sequelize, dataTypes) {
 
         Comentario.belongsTo(models.Usuario , {
             as: "usuario",
-            foreignKey : "usuariosId"
+            foreignKey : "usuarioId"
         });
 
         Comentario.belongsTo(models.Producto, {

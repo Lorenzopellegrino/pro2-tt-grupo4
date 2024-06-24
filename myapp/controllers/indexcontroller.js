@@ -42,7 +42,7 @@ const indexcontroller = {
 
         db.Producto.findAll(filtro)
         .then(function(results) {
-            return res.render('search-results', {title: `Resultados de la busqueda: ${busqueda}`, productos : results})
+            return res.render('search-results', {title: `Resultados busqueda: ${busqueda}`, productos : results})
         })
         .catch(function(error) {
             console.log(error);

@@ -25,7 +25,7 @@
         <div class="row">
 			<!-- Show the "ultimos" products -->
 			<% if (productos && productos.length > 0) {
-                for(let index = 0; index < 8; index++) {%>
+                for(let index = 0; index < productos.length; index++) {%>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <section class="product-box">
                         <a href="/product/id/<%= productos[index].id %>">
@@ -35,8 +35,8 @@
                             <article class="product-box_data">
                                 <h2><%= productos[index].nombreProducto %></h2>
                                 <p><%= productos[index].descripcionProducto %></p>
-                                <p>Comentarios: <%= productos[index].comentario %></p>
-                                <p> Dueño: <a href="/users/profile/id<%= productos[index].usuario.usuario%>"><%= productos[index].usuario.usuario%> </a></p>
+                    
+                                <p> Dueño: <a href="/users/profile/id<%= productos[index].usuario.id%>"><%= productos[index].usuario.usuario%> </a></p>
                             </article>
                         </a>
                     </section>
