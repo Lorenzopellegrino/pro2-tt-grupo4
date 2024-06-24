@@ -30,7 +30,7 @@
 				<label class="form-label" for="usuario">Usuario</label> <br>
 				<input class="form-input" type="text" name="usuario" id="usuario" placeholder="usuario" value="<%= locals.old !== undefined && old.usuario ? old.usuario: "" %>" ><br>
 				<% if (locals.errors && errors.usuario) { %>
-					<p class = "feedback"><%= errors.usuario %></p>
+					<p class = "feedback"><%= errors.usuario.msg %></p>
 					<% } %>
 
 				<label class="form-label" for="password">Ingrese su nueva contraseña</label><br>
