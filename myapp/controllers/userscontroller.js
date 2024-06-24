@@ -7,14 +7,7 @@ const { update } = require('./productoscontroller');
 
 
 const usercontroller = {
-    login: function(req, res, next){
-        if (req.session.user != undefined) {
-            return res.redirect("/users/profile/id" + req.session.user.id);
-        }
-        else{
-            return res.render("login", {title: "LOGIN"})
-        }
-    },
+    
     register: function(req, res, next){
         if(req.session.user != undefined) {
             return res.redirect("/users/profile/id/" + req.session.user.id);
@@ -23,34 +16,14 @@ const usercontroller = {
             res.render("register", {title: "REGISTER"})
         } 
     },
-
-    profile: function(req, res, next){
-        let id = req.params.id;
-        
-        let criterio = {
-            include: [
-                {association: "productos"},
-                {association: "comentarios"}
-            ],
-            order: [[{model: db.Producto, as: "productos"}, "createdAt", "DESC"]]
+    login: function(req, res, next){
+        if (req.session.user != undefined) {
+            return res.redirect("/users/profile/id" + req.session.user.id);
         }
-
-        db.Usuario.findByPk(id, criterio)
-        .then(function(results) {
-            let condition = false;
-
-            if (req.session.user != undefined && req.session.user.id == results.id){
-                condition = true;
-            }
-
-            return res.render("profile", {title: `@${results.usuario}`, usuario: results.usuario , producto: results.productos, comentarios: results.comentarios.length, condition: condition});
-        })
-        .catch(function (error){
-            console.log(error);
-        });
-        
+        else{
+            return res.render("login", {title: "LOGIN"})
+        }
     },
-
     store : function(req , res){
         let form = req.body;
         let errors = validationResult(req);
@@ -74,8 +47,7 @@ const usercontroller = {
             return res.render('Register', {title: "Register" , errors: errors.mapped(), old: req.body});
         }
 
-    },
-
+    },  
     loginUser: function(req,res, next) {
         let form = req.body;
         let errors = validationResult(req); 
@@ -110,13 +82,37 @@ const usercontroller = {
             res.render('login' , {title: 'Login' , errors: errors.mapped(), old: req.body, user: req.session.user});
         }
     },
-
     logout: function (req,res,next) {
         req.session.destroy();
         res.clearCookie("userId")
         return res.redirect("/")
     },
+    profile: function(req, res, next){
+        let id = req.params.id;
+        
+        let criterio = {
+            include: [
+                {association: "productos"},
+                {association: "comentarios"}
+            ],
+            order: [[{model: db.Producto, as: "productos"}, "createdAt", "DESC"]]
+        }
 
+        db.Usuario.findByPk(id, criterio)
+        .then(function(results) {
+            let condition = false;
+
+            if (req.session.user != undefined && req.session.user.id == results.id){
+                condition = true;
+            }
+
+            return res.render("profile", {title: `@${results.usuario}`, usuario: results.usuario , producto: results.productos, comentarios: results.comentarios.length, condition: condition});
+        })
+        .catch(function (error){
+            console.log(error);
+        });
+        
+    },
     usersEdit: function(req, res, next) {
 
         if (req.session.user != undefined) {

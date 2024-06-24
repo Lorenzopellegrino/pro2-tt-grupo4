@@ -34,34 +34,6 @@ const productocontoller = {
         })
          
     },
-    
-
-    add: function(req, res){
-
-        if (req.session.user != undefined) {
-            return res.render("product-add", {title: "Agregar Producto"})
-        } else {
-            return res.redirect("/users/login")
-        }
-    },
-
-    store: function(req, res) {
-        let form = req.body;
-        let errors = validationResult(req)
-
-        if (errors.isEmpty()) {
-            db.Producto.create(form)
-            .then((result)=>{
-                return res.redirect("/product/id/" + result.id)
-            }).catch((error) => {
-                return console.log(error);
-            })
-        } 
-        else {
-            return res.render("product-add", {title: "Register", errors: errors.mapped(), old: req.body})
-        }
-    },
-
     edit: function(req, res) {
         let form = req.body;
 
@@ -78,7 +50,30 @@ const productocontoller = {
                 return console.log(error);
             });
     },
+    add: function(req, res){
 
+        if (req.session.user != undefined) {
+            return res.render("product-add", {title: "Agregar Producto"})
+        } else {
+            return res.redirect("/users/login")
+        }
+    },
+    store: function(req, res) {
+        let form = req.body;
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+            db.Producto.create(form)
+            .then((result)=>{
+                return res.redirect("/product/id/" + result.id)
+            }).catch((error) => {
+                return console.log(error);
+            })
+        } 
+        else {
+            return res.render("product-add", {title: "Register", errors: errors.mapped(), old: req.body})
+        }
+    },
     update: function(req, res) {
         let form = req.body;
         let errors = validationResult(req);
@@ -122,8 +117,6 @@ const productocontoller = {
             })
         }
     },
-
-
     delete: function(req, res) {
         let form = req.body;
 
@@ -152,7 +145,6 @@ const productocontoller = {
                 return res.redirect("/users/login");
         }
     },
-
     comment: function(req, res) {
         let form = req.body;
         let errors = validationResult(req)
