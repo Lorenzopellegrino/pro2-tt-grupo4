@@ -72,12 +72,13 @@ const usercontroller = {
                         if (form.remember != undefined){
                             res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
                         }
-                        return res.redirect("/users/profile/id/" + result.id)   
+                        return res.redirect("/users/profile/id/" + result.id);
                         }
-                        else{
-                        return res.redirect("/users/login");
+                    else{
+                            return res.redirect("/users/login");
                         }
-                } else{
+                    }
+                else{
                     return res.send("No hay mail parecidos a: " + form.email)
                 }
             }).catch((err) => {
