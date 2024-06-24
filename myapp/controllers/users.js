@@ -2,6 +2,8 @@ const db = require('../database/models');
 const bcrypt = require("bcryptjs");
 const op = db.Sequelize.Op;
 const {validationResult} = require('express-validator');
+const { update } = require('./productoscontroller');
+
 
 
 const usercontroller = {
@@ -109,8 +111,59 @@ const usercontroller = {
         return res.redirect("/")
     },
 
-    edit: function(req, res,next){
-        res.render("profile-edit", {title: "EDIT", usuario: db.usuario})
+    usersEdit: function(req, res, next) {
+
+        if (req.session.user != undefined) {
+            let id = req.session.user.id;
+
+            db.Usuario.findByPk(id)
+            .then(function(results){
+                return res.render('profile-edit', {title: 'Profile Edit', usuario: results});
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+        else {
+            return res.redirect("/users/login");
+        }
+
+    },
+    update: function (req, res) {
+        let errors = validationResult(req);
+        let form = req.body;
+
+        if (errors.isEmpty()) {
+
+            let filtrado = {
+                where: {
+                id: req.session.user.id
+                }
+            } 
+
+            let usuario = {
+                mail: form.email,
+                usuario: form.usuario,
+                contrasenia: bcrypt.hashSync(form.contrasenia, 10),
+                fechaNacimiento: form.birthdate,
+                numeroDocumento: form.documento,
+                fotodeperfil: form.fotodeperfil 
+            }
+    
+            db.Usuario.update(usuario, filtrado)
+            .then((result) => {
+                return res.redirect("/users/login")
+            })
+            .catch((err) => {
+                return console.log(err);
+            });       
+        } 
+            // return res.send("ACA HAY QUE HACER TODO EL UPDATE DE USUARIO (controller Users en el metodo .update si errors.isEmpty) (borrar el res send y hacer todo el desarrollo)")
+        
+        else {
+            return res.render('profile-edit', {title: "Profile Edit", errors: errors.mapped(), old: req.body }); 
+        }
+        
     }
 };
 

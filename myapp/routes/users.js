@@ -87,8 +87,8 @@ router.post("/register", validationRegister, usercontroller.store)
 
 router.get('/profile', usercontroller.profile);
 
-router.get('/edit', usercontroller.edit);
-//router.post("/edit", validationEdit, usercontroller.update);
+router.get('/edit', usercontroller.usersEdit);
+router.post("/edit", validationEdit, usercontroller.update);
 
 router.post("/logout", usercontroller.logout);
 
