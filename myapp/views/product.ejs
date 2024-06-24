@@ -51,11 +51,20 @@
 							</article>
                 		<%}%>
         			</section>
-                
-					<form class="form" action="/product" method="get">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+					<% if (locals.user != undefined) { %>
+						<form class="form" action="/product/id/<%= productos.id %>" method="post">
+						<input class="form-input" name="comentario" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
+					<% if (locals.errors && locals.errors.comentario) { %>
+						<p> <%= locals.errors.comentario.msg %> </p> <br>
+					<% } %>
+					<% } else { %>
+						<div class="deslogueado">
+							<a href="/users/login">Para poder agregar un comentario, debes iniciar sesion.</a>
+						</div>
+					<% } %>
+					
 					<hr>
 				</div>
 			</div>
