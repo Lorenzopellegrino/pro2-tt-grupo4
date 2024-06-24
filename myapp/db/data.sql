@@ -44,15 +44,15 @@ FOREIGN KEY (usuarioId) REFERENCES usuarios(id)
 /*SQL USUARIOS*/
 
 INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
-VALUES (DEFAULT, 'joacopro@gmail.com', "joaco", '1234', '2004-12-16', '46293228', 'usuario1foto' );
+VALUES (DEFAULT, 'joacopro@gmail.com', "joaco", '1234', '2004-12-16', '46293228', 'https://i.pinimg.com/222x/57/70/f0/5770f01a32c3c53e90ecda61483ccb08.jpg' );
 INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
-VALUES (DEFAULT, 'delfi@gmail.com', "delfi", '1234', '2003-02-12', '41233248', 'usuario2foto' );
+VALUES (DEFAULT, 'delfi@gmail.com', "delfi", '1234', '2003-02-12', '41233248', 'https://i.pinimg.com/222x/57/70/f0/5770f01a32c3c53e90ecda61483ccb08.jpg' );
 INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
-VALUES (DEFAULT, 'javi12@gmail.com', "javi", '1234', '2002-10-04', '34293448', 'usuario3foto' );
+VALUES (DEFAULT, 'javi12@gmail.com', "javi", '1234', '2002-10-04', '34293448', 'https://i.pinimg.com/222x/57/70/f0/5770f01a32c3c53e90ecda61483ccb08.jpg' );
 INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
-VALUES (DEFAULT, 'santiperez@gmail.com', "santi", '1234', '2006-03-16', '46293228', 'usuario4foto');
+VALUES (DEFAULT, 'santiperez@gmail.com', "santi", '1234', '2006-03-16', '46293228', 'https://i.pinimg.com/222x/57/70/f0/5770f01a32c3c53e90ecda61483ccb08.jpg');
 INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
-VALUES (DEFAULT, 'sofia19@gmail.com', "sofia", '1234', '2004-12-16', '46293228', 'usuario5foto');
+VALUES (DEFAULT, 'sofia19@gmail.com', "sofia", '1234', '2004-12-16', '46293228', 'https://i.pinimg.com/222x/57/70/f0/5770f01a32c3c53e90ecda61483ccb08.jpg');
 
 /*SQL PRODUCTOS*/
 
@@ -136,18 +136,18 @@ INSERT INTO comentarios (id, productoId, usuarioId, comentario)
 VALUES (DEFAULT, 8, 5, "sin duda la mejor");
 
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 9, 5, "comentario");
+VALUES (DEFAULT, 9, 5, "incredible");
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 9, 5, "comentario");
+VALUES (DEFAULT, 9, 5, "locura");
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 9, 1, "comentario");
+VALUES (DEFAULT, 9, 1, "Increible");
 
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 10, 5, "comentario");
+VALUES (DEFAULT, 10, 5, "OMG");
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 10, 3, "comentario");
+VALUES (DEFAULT, 10, 3, "Ostia");
 INSERT INTO comentarios (id, productoId, usuarioId, comentario)
-VALUES (DEFAULT, 10, 4, "comentario");
+VALUES (DEFAULT, 10, 4, "Hermosa");
 
 
 
