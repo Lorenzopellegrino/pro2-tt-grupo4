@@ -87,14 +87,20 @@ const usercontroller = {
             db.Usuario.findOne(filtro)
              .then((result) => {
                 if (result != null){
-                    req.session.user = result;
-                    if (form.remember != undefined){
-                        res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
-                    }
-                    return res.redirect("/users/profile/id/" + result.id)   
-                }
-                else{
-                    return res.redirect("/users/login");
+
+                    let check = bcrypt.compareSync(form.password, result.password);
+                    if (check) {
+                        req.session.user = result;
+                        if (form.remember != undefined){
+                            res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
+                        }
+                        return res.redirect("/users/profile/id/" + result.id)   
+                        }
+                        else{
+                        return res.redirect("/users/login");
+                        }
+                } else{
+                    return res.send("No hay mail parecidos a: " + form.email)
                 }
             }).catch((err) => {
                 return console.log(err);
@@ -144,7 +150,7 @@ const usercontroller = {
             let usuario = {
                 email: form.email ,
                 usuario: form.usuario,
-                contrasenia: bcrypt.hashSync(form.contrasenia, 10),
+                contrasenia: bcrypt.hashSync(form.password, 10),
                 fechadeNacimiento: form.birthdate,
                 numeroDocumento: form.documento,
                 fotodeperfil: form.fotodeperfil 
@@ -157,9 +163,7 @@ const usercontroller = {
             .catch((err) => {
                 return console.log(err);
             });       
-        } 
-            // return res.send("ACA HAY QUE HACER TODO EL UPDATE DE USUARIO (controller Users en el metodo .update si errors.isEmpty) (borrar el res send y hacer todo el desarrollo)")
-        
+        }         
         else {
             return res.render('profile-edit', {title: "Profile Edit", errors: errors.mapped(), old: req.body }); 
         }
