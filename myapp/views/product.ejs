@@ -33,7 +33,7 @@
 			
 		</div>
 		<%if (!condition) { %>
-				<p class="user">Dueño: <a  href="/users/profile/id/<%= productos.usuario.id%>">@<%= productos.usuario.nombre%></a></p>
+				<p class="user">Dueño: <a  href="/users/profile/id/<%= productos.usuario.id%>">@<%= productos.usuario.usuario%></a></p>
 
 		<div class="product-detail">
 			<div class="row">
@@ -49,7 +49,7 @@
 							<article>
 								<img src=<%= comentarios[index].nombre.fotoperfil %> alt="">
 								<div class="info">
-									<p class="usuario"> <strong> <a href="/users/profile/id%<%=comentarios[index].nombre.id%>"><%= comentarios[index].usuario.usuario%></a></strong>
+									<p class="usuario"> <strong> <a href="/users/profile/id%<%=comentarios[index].usuario.id%>"><%= comentarios[index].usuario.usuario%></a></strong>
 										<%=	comentarios[index].comentario%>
 									</p>
 								</div>
