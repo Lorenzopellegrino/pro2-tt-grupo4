@@ -65,9 +65,7 @@ const usercontroller = {
             db.Usuario.findOne(filtro)
              .then((result) => {
                 if (result != null){
-
-                    let check = bcrypt.compareSync(form.password, result.password);
-                    if (check) {
+                    
                         req.session.user = result;
                         if (form.remember != undefined){
                             res.cookie("userId",result.id,{maxAge: 1000 * 60 * 35})
@@ -77,10 +75,6 @@ const usercontroller = {
                     else{
                             return res.redirect("/users/login");
                         }
-                    }
-                else{
-                    return res.send("No hay mail parecidos a: " + form.email)
-                }
             }).catch((err) => {
                 return console.log(err);
             });
