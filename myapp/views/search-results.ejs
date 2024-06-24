@@ -28,15 +28,15 @@
                 for(let index = 0; index < 8; index++) {%>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <section class="product-box">
-                        <a href="/product">
+                        <a href="/product/id/<%= productos[index].id %>">
                             <figure class="product-box_image">
-                                <img class="foto-del-index" src=<%= productos[index].imagenProducto %> alt="">
+                                <img class="foto-del-index" src= "<%=productos[index].imagenProducto%>">
                             </figure>
                             <article class="product-box_data">
-                                <h2><%= productos[index].nombre %></h2>
-                                <p><%= productos[index].descripcion %></p>
-                                <p>Comentarios: <%= productos[index].comentarios.length %></p>
-                                <p> Dueño: <a href="/users/profile/id<%= productos[i].usuario.usuario%>"><%= productos[i<.usuario.usuario%> </a></p>
+                                <h2><%= productos[index].nombreProducto %></h2>
+                                <p><%= productos[index].descripcionProducto %></p>
+                                <p>Comentarios: <%= productos[index].comentario %></p>
+                                <p> Dueño: <a href="/users/profile/id<%= productos[index].usuario.nombre%>"><%= productos[index].usuario.nombre%> </a></p>
                             </article>
                         </a>
                     </section>

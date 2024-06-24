@@ -18,35 +18,40 @@
 			<h2 class="products-title"><%= productos.nombreProducto %></h2> 
 			<% if (condition) {%>
 				<p class="product-detail-description">
-				<form action="/product/edit" method="post">
-					<input type="hidden" name="id" value="<%= productos.id %>">
-					<button class="btn-special btn-red" type="submit"><a>Editar</a></button>
-				</form>
-				<form action="/product/delete" method="post">
-					<input type="hidden" name="id" value="<%= productos.id %>">
-					<input type="hidden" name="idUsuario" value="<%= productos.usuario.id %>">
-					<button class="btn-special btn-red" type="submit"><a>Eliminar</a></button>
-				</form>
-			</p>
+					<form action="/product/edit" method="post">
+						<input type="hidden" name="id" value="<%= productos.id%>">
+						<button class="btn-special btn-red" type="submit"><a>Editar</a></button>
+					</form>
+					<a> </a>
+					<form action="/product/delete" method="post">
+						<input type="hidden" name="id" value="<%= productos.id%>">
+						<input type="hidden" name="idUsuario" value="<%= productos.usuario.id %>">
+						<button class="btn-special btn-red" type="submit"><a>Eliminar</a></button>
+					</form>
+				</p>
 			<%} %>
 			
 		</div>
+		<%if (!condition) { %>
+				<p class="user">Dueño: <a  href="/users/profile/id/<%= productos.usuario.id%>">@<%= productos.usuario.nombre%></a></p>
 
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img class="product-detail-img" src=<%= productos[0].imagen %> >
-					<p class="product-detail-description"><%= productos[0].descripcion %></p>
+					<img class="product-detail-img" src=<%= productos.imagenProducto %> >
+					<p class="product-detail-description"><%= productos.descripcionProducto %></p>
 				</article>
 				
 				
     		 	<div class="col-12 col-lg-4">
             		<section class="comments">
-                		<% for(let index = 0; index < productos[0].comentarios.length; index++) {%>
+                		<% for(let index = 0; index < .comentarios.length; index++) {%>
 							<article>
-								<img src=<%= productos[0].comentarios[index].foto_de_perfil %> alt="">
+								<img src=<%= comentarios[index].nombre.fotoperfil %> alt="">
 								<div class="info">
-									<p class="usuario"> <strong> <a href="/users/profile"><%= productos[0].comentarios[index].user%></a></strong><%= productos[0].comentarios[index].comentario%></p>
+									<p class="usuario"> <strong> <a href="/users/profile/id%<%=comentarios[index].nombre.id%>"><%= comentarios[index].usuario.usuario%></a></strong>
+										<%=	comentarios[index].comentario%>
+									</p>
 								</div>
 							</article>
                 		<%}%>

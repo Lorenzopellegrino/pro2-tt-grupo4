@@ -3,7 +3,7 @@ const op = db.Sequelize.Op;
 
 const indexcontroller = {
     index: function(req, res){
-        let filtrado = {
+        let filtro = {
             order:[["createdAt" , "DESC"]],
             include: [
                 {association: "comentarios"},
@@ -11,10 +11,10 @@ const indexcontroller = {
             ]
         }
 
-        db.Producto.findAll(filtrado)
-        .then(function(result) {
+        db.Producto.findAll(filtro)
+        .then(function(results) {
             //return res.send(result)
-            return res.render("index", {title: "Home", productos: result});
+            return res.render("index", {title: "Home", productos: results});
         })
         .catch(function (error) {
             console.log(error);
@@ -27,7 +27,7 @@ const indexcontroller = {
 
         let busqueda = req.query.search;
 
-        let filtrado = {
+        let filtro = {
             where: {
                 [op.or] :[
                     {nombreProducto:{[op.like]: "%" + busqueda + "%"}},
@@ -41,9 +41,9 @@ const indexcontroller = {
             ]
         }
 
-        db.Producto.findAll(filtrado)
-        .then(function(result) {
-            return res.render('search-results', {title: `Resultados de la busqueda: ${busqueda}`, productos : result})
+        db.Producto.findAll(filtro)
+        .then(function(results) {
+            return res.render('search-results', {title: `Resultados de la busqueda: ${busqueda}`, productos : results})
         })
         .catch(function(error) {
             console.log(error);
