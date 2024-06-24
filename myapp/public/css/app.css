@@ -31,7 +31,11 @@ body {
   font-weight: 300;
   background-color: var(--light-gray);
 }
-
+body {
+  font-family: var(--light-gray);
+  font-weight: 300;
+  background-color: var(--light-gray);
+}
 ul,
 ol {
   list-style: none;
