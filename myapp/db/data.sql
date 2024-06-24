@@ -5,7 +5,7 @@ USE myapp;
 CREATE TABLE usuarios (
 id 				INT UNSIGNED 		PRIMARY KEY AUTO_INCREMENT,
 email 			VARCHAR(300) 		NOT NULL UNIQUE,
-nombre          VARCHAR(300)        NOT NULL,
+usuario          VARCHAR(300)        NOT NULL,
 contrasenia 	VARCHAR(300) 		NOT NULL,
 fecha 			DATE 				NOT NULL,
 dni 			INT 				NOT NULL,
@@ -43,15 +43,15 @@ FOREIGN KEY (usuariosId) REFERENCES usuarios(id)
 
 /*SQL USUARIOS*/
 
-INSERT INTO usuarios (id, email, nombre, contrasenia, fecha, dni, fotoperfil)
+INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
 VALUES (DEFAULT, 'joacopro@gmail.com', "joaco", '1234', '2004-12-16', '46293228', 'usuario1foto' );
-INSERT INTO usuarios (id, email, nombre, contrasenia, fecha, dni, fotoperfil)
+INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
 VALUES (DEFAULT, 'delfi@gmail.com', "delfi", '1234', '2003-02-12', '41233248', 'usuario2foto' );
-INSERT INTO usuarios (id, email, nombre, contrasenia, fecha, dni, fotoperfil)
+INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
 VALUES (DEFAULT, 'javi12@gmail.com', "javi", '1234', '2002-10-04', '34293448', 'usuario3foto' );
-INSERT INTO usuarios (id, email, nombre, contrasenia, fecha, dni, fotoperfil)
+INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
 VALUES (DEFAULT, 'santiperez@gmail.com', "santi", '1234', '2006-03-16', '46293228', 'usuario4foto');
-INSERT INTO usuarios (id, email, nombre, contrasenia, fecha, dni, fotoperfil)
+INSERT INTO usuarios (id, email, usuario, contrasenia, fecha, dni, fotoperfil)
 VALUES (DEFAULT, 'sofia19@gmail.com', "sofia", '1234', '2004-12-16', '46293228', 'usuario5foto');
 
 /*SQL PRODUCTOS*/
