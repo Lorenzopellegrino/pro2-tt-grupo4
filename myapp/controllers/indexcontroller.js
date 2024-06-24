@@ -13,7 +13,6 @@ const indexcontroller = {
 
         db.Producto.findAll(filtro)
         .then(function(results) {
-            //return res.send(result)
             return res.render("index", {title: "Home", productos: results});
         })
         .catch(function (error) {

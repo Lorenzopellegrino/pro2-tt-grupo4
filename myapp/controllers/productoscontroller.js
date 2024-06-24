@@ -15,19 +15,22 @@ const productocontoller = {
             ]}
         ],
         order: [
-            ["comentario", "createdAt", "DESC"]
+            [[{model: db.Comentario, as: "comentarios"}, "createdAt", "DESC"]]
         ]
         };
+
+        let condition = false;
+
         db.Producto.findByPk(id, criterio)
         .then(function (results) {
-            let condition = false;
-            if (req.session.usuario != undefined && req.session.usuario.id == results.usuario.id) {
+            
+            if (req.session.user != undefined && req.session.user.id == results.usuario.id) {
                 condition = true;
             }
-            return res.render('product', {title : 'Detalle Producto' , productos: results, condition: condition})
+            return res.render('product', {title : 'Detalle Producto' , productos: results, comentarios: results.comentarios, condition: condition})
            
-        }).catch(function(respuestaNegativa) {
-            console.log(respuestaNegativa);
+        }).catch(function(error) {
+            console.log(error);
         })
          
     },
@@ -35,7 +38,7 @@ const productocontoller = {
 
     add: function(req, res){
 
-        if (req.session.usuario != undefined) {
+        if (req.session.user != undefined) {
             return res.render("product-add", {title: "Agregar Producto"})
         } else {
             return res.redirect("/users/login")
@@ -53,7 +56,8 @@ const productocontoller = {
             }).catch((error) => {
                 return console.log(error);
             })
-        } else {
+        } 
+        else {
             return res.render("product-add", {title: "Register", errors: errors.mapped(), old: req.body})
         }
     },
@@ -71,7 +75,7 @@ const productocontoller = {
             })
             .catch((error) => {
                 return console.log(error);
-            })
+            });
     },
 
     update: function(req, res) {
@@ -80,7 +84,7 @@ const productocontoller = {
         if (errors.isEmpty()){
             let filtro = {
                 where: {
-                  id:form.id
+                id: form.id
                 }  
               }  
 
@@ -109,8 +113,8 @@ const productocontoller = {
                 ]
             }
             db.Producto.findByPk(form.id, criterio)
-            .then(function(result) {
-                return res.render("product-edit", {title: "Editar Producto", errors: errors.mapped(), old: req.body, productos: result})
+            .then(function(results) {
+                return res.render("product-edit", {title: "Editar Producto", errors: errors.mapped(), old: req.body, productos: results});
             })
             .catch((err) => {
                 return console.log(err);
@@ -129,9 +133,9 @@ const productocontoller = {
                 
         }
 
-        if (req.session.usuario != undefined) {
-            let id = req.session.usuario.id;
-            if (form.idUsuario == id) {
+        if (req.session.user != undefined) {
+            let id = req.session.user.id;
+            if (form.usuarioId == id) {
                 db.Producto.destroy(filtro)
                 .then((result) => {
                     return res.redirect("/");
@@ -151,21 +155,21 @@ const productocontoller = {
         let errors = validationResult(req)
         if (errors.isEmpty()) {
             let comentario = {
-                usuarioId: req.session.usuario.id,
+                usuarioId: req.session.user.id,
                 productoId: req.params.id,
                 comentario: form.comentario
             }
 
             db.Comentario.create(comentario)
-            .then((resultados) => {
+            .then((result) => {
                 return res.reditect("/product/id/" + req.params.id)
             }).catch((error)=> {
                 return console.log(error);
             });
         }
         else {
-            let id = req.params.id
-            let condition = false
+            let id = req.params.id;
+            let condition = false;
             
             let criterio = {
                 include: [
@@ -178,7 +182,7 @@ const productocontoller = {
             }
             db.Producto.findByPk(id, criterio)
             .then(function(results) {
-                if (req.session.usuario != undefined && req.session.usuario.id == results.usuario.id) {
+                if (req.session.user != undefined && req.session.user.id == results.usuario.id) {
                     condition = true;                   
                 }
 
