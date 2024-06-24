@@ -22,7 +22,7 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 			
-            <form class="formulario" action="/users/profile" method="post">
+            <form class="formulario" action="/users/login" method="post">
                 <label class="form-label" for="email">Email</label><br>
                 <input class="form-input" type="email" id="email" name="email" value="<%= locals.old !== undefined && old.email ? old.email: "" %>"><br>
                 <% if (locals.errors && errors.email) { %>
@@ -32,7 +32,7 @@
                 <label class="form-label" for="password">Contraseña</label><br>
                 <input class="form-input" type="password" name="password" id="password" value="<%= locals.old !== undefined && old.password ? old.password: ""%>"><br>
                 <% if (locals.errors && errors.password) { %>
-					<p class = "feedback"><%= errors.password %></p>
+					<p class = "feedback"><%= errors.password.msg %></p>
 					<% } %>
 
                 <div class="div-recordar">

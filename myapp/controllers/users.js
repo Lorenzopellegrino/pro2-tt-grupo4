@@ -32,7 +32,7 @@ const usercontroller = {
                 {association: "productos"},
                 {association: "comentarios"}
             ],
-            order: [[{model: db.Producto, as: "producto"}, "createdAt", "DESC"]]
+            order: [[{model: db.Producto, as: "productos"}, "createdAt", "DESC"]]
         }
 
         db.Usuario.findByPk(id, criterio)
@@ -81,7 +81,7 @@ const usercontroller = {
         let errors = validationResult(req); 
         if (errors.isEmpty()){
             let filtro = {
-                where: [{email:form.email}]
+                where: [{email: form.email}]
             };
 
             db.Usuario.findOne(filtro)
@@ -142,10 +142,10 @@ const usercontroller = {
             } 
 
             let usuario = {
-                mail: form.email,
+                email: form.email ,
                 usuario: form.usuario,
                 contrasenia: bcrypt.hashSync(form.contrasenia, 10),
-                fechaNacimiento: form.birthdate,
+                fechadeNacimiento: form.birthdate,
                 numeroDocumento: form.documento,
                 fotodeperfil: form.fotodeperfil 
             }
