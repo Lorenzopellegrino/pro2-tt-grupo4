@@ -22,13 +22,13 @@
 			<!-- Show the "ultimos" products -->
 			<form class="formulario formulario-register" action="/users/profile" method="get">
 				<label class="form-label" for="email">Email</label> <br> 
-				<input class="form-input" type="email" id="email" name="email" value="" placeholder="ejemplo@gmail.com" required><br>
+				<input class="form-input" type="email" id="email" name="email" placeholder="aaaaa@gmail.com" value="<%= locals.old !== undefined && old.email ? old.email: "" %>" ><br>
 				<% if (locals.errors && errors.email) { %>
 					<p class = "feedback"><%= errors.email.msg %></p>
 					<% } %>
 
 				<label class="form-label" for="usuario">Usuario</label> <br>
-				<input class="form-input" type="text" name="usuario" id="usuario" value="" placeholder="ejemplo" required><br>
+				<input class="form-input" type="text" name="usuario" id="usuario" placeholder="usuario" value="<%= locals.old !== undefined && old.usuario ? old.usuario: "" %>" ><br>
 				<% if (locals.errors && errors.usuario) { %>
 					<p class = "feedback"><%= errors.usuario %></p>
 					<% } %>
@@ -36,28 +36,28 @@
 				<label class="form-label" for="password">Ingrese su nueva contraseña</label><br>
 				<input class="form-input" type="text" id="password" name="password" placeholder="contraseña" ><br>
 				<% if (locals.errors && errors.password) { %>
-					<p class = "feedback"><%= errors.password %></p>
+					<p class = "feedback"><%= errors.password.msg %></p>
 					<% } %>
 
 				<label class="form-label" for="birthdate">Fecha de nacimiento</label><br>
 				<input class="form-input" type="date" name="birthdate" value="" required><br>
 				<% if (locals.errors && errors.birthdate) { %>
-					<p class = "feedback"><%= errors.birthdate %></p>
+					<p class = "feedback"><%= errors.birthdate.msg %></p>
 					<% } %>
 
 				<label class="form-label" for="document_number">Numero de documento</label><br>
 				<input class="form-input" type="number" id="documento" name="documento" value="" placeholder="12345678">
-				<% if (locals.errors && errors.document_number) { %>
-					<p class = "feedback"><%= errors.documento %></p>
+				<% if (locals.errors && errors.documento) { %>
+					<p class = "feedback"><%= errors.documento.msg %></p>
 					<% } %>
 
 				<label class="form-label" for="profile_picture">Foto de perfil</label><br>
 				<input class="form-input" type="file" id="fotodeperfil" name="fotodeperfil"> <br>
 				<% if (locals.errors && errors.fotodeperfil) { %>
-					<p class = "feedback"><%= errors.fotodeperfil %></p>
+					<p class = "feedback"><%= errors.fotodeperfil.msg %></p>
 					<% } %>
 
-				<a class="buy-now-button" href="/users/login">Guardar</a>
+				<a class="buy-now-button" href="/users/login">Guardar Registro</a>
 			</form> 
         </div>
     </div>
