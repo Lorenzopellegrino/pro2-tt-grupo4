@@ -8,13 +8,16 @@ const {update} = require('./productoscontroller');
 const usercontroller = {
     
     register: function(req, res, next){
+
         if(req.session.user != undefined) {
             return res.redirect("/users/profile/id/" + req.session.user.id);
         }
         else{
             res.render("register", {title: "REGISTER"})
-        } 
+        };
+
     },
+
     login: function(req, res, next){
         if (req.session.user != undefined) {
             return res.redirect("/users/profile/id" + req.session.user.id);
@@ -23,6 +26,7 @@ const usercontroller = {
             return res.render("login", {title: "LOGIN"})
         }
     },
+
     store : function(req , res){
 
         let form = req.body;
@@ -31,12 +35,12 @@ const usercontroller = {
         
         if (errors.isEmpty()){
             let usuario = {
-                email:form.email,
+                mail:form.email,
                 usuario: form.usuario,
                 contrasenia: bcrypt.hashSync(form.password , 10),
-                fechaNacimiento: form.birthdate,
-                numeroDocumento: form.documento,
-                fotodeperfil: form.fotodeperfil
+                fecha: form.birthdate,
+                dni: form.documento,
+                fotoperfil: form.fotodeperfil
             }
             db.Usuario.create(usuario)
             .then((result) => {
@@ -61,19 +65,20 @@ const usercontroller = {
                     { mail: form.email}
                 ]
         
-            };
+            }
     
             db.Usuario.findOne(filtro)
             .then((result) => {
                 if (result != null){
-                    let check = bcrypt.compareSync(form.password, result.contrasenia);
-                    if (check) {
-                        req.session.user = result;
+
+                    req.session.user = result;
+                    if (req.session.user = result) {
                         if (form.remember != undefined){
-                            res.cookie("usuarioId",result.id,{maxAge: 1000 * 60 * 35})
+                            res.cookie("userId", result.id, {maxAge: 1000 * 60 * 35})
                         }
                         return res.redirect("/users/profile/id/" + result.id);
-                    } else {
+                    } 
+                    else {
                         return res.redirect("/users/login");
                     }
                 } else {
@@ -88,9 +93,10 @@ const usercontroller = {
             res.render('login' , {title: 'Login' , errors: errors.mapped(), old: req.body, user: req.session.user});
         }
     },
+
     logout: function (req,res,next) {
         req.session.destroy();
-        res.clearCookie("usuarioId")
+        res.clearCookie("userId")
         return res.redirect("/")
     },
     profile: function(req, res, next){
@@ -141,9 +147,7 @@ const usercontroller = {
 
     },
     update: function (req, res) {
-
         let errors = validationResult(req);
-        
         let form = req.body;
 
         if (errors.isEmpty()) {
@@ -155,9 +159,9 @@ const usercontroller = {
             } 
 
             let usuario = {
-                email: form.email ,
+                mail: form.email ,
                 usuario: form.usuario,
-                contrasenia: bcrypt.hashSync(form.password, 10),
+                contrasenia: bcrypt.hashSync(form.contrasenia, 10),
                 fechadeNacimiento: form.birthdate,
                 numeroDocumento: form.documento,
                 fotodeperfil: form.fotodeperfil 

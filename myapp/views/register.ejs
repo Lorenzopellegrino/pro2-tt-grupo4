@@ -20,7 +20,7 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<form class="formulario formulario-register" action="/users/profile" method="get">
+			<form class="formulario formulario-register" action="/users/profile" method="POST">
 				<label class="form-label" for="email">Email</label> <br> 
 				<input class="form-input" type="email" id="email" name="email" placeholder="aaaaa@gmail.com" value="<%= locals.old !== undefined && old.email ? old.email: "" %>" ><br>
 				<% if (locals.errors && errors.email) { %>
@@ -57,7 +57,7 @@
 					<p class = "feedback"><%= errors.fotodeperfil.msg %></p>
 					<% } %>
 
-				<a class="buy-now-button" href="/users/login">Guardar Registro</a>
+				<button type="submit">Guardar Registro</button>
 			</form> 
         </div>
     </div>
