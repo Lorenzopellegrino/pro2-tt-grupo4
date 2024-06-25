@@ -18,14 +18,14 @@
 			<h2 class="products-title"><%= productos.nombreProducto %></h2> 
 			<% if (condition) {%>
 				<p class="product-detail-description">
-					<form action="/product/editProduct" method="post">
+					<form action="/product/editarProducto" method="post">
 						<input type="hidden" name="id" value="<%= productos.id%>">
 						<button class="btn-special btn-red" type="submit"><a>Editar</a></button>
 					</form>
 					<a> </a>
 					<form action="/product/delete" method="post">
 						<input type="hidden" name="id" value="<%= productos.id%>">
-						<input type="hidden" name="idUsuario" value="<%= productos.usuario.id %>">
+						<input type="hidden" name="usuarioId" value="<%= productos.usuario.id %>">
 						<button class="btn-special btn-red" type="submit"><a>Eliminar</a></button>
 					</form>
 				</p>
