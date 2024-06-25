@@ -51,7 +51,7 @@ const usercontroller = {
 
     },  
 
-    loginUser: function(req, res, next) {
+    loginUser: function(req, res, next) { 
         let form = req.body;
         let errors = validationResult(req); 
     
