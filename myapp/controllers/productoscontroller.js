@@ -157,7 +157,7 @@ const productocontoller = {
 
             db.Comentario.create(comentario)
             .then((result) => {
-                return res.reditect("/product/id/" + req.params.id)
+                return res.redirect("/product/id/" + req.params.id)
             }).catch((error)=> {
                 return console.log(error);
             });
