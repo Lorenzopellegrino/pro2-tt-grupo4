@@ -88,7 +88,7 @@ router.get('/login', usercontroller.login);
 router.post("/login", validationsLogin, usercontroller.loginUser);
 
 router.get('/register', usercontroller.register);
-router.post("/profile", validationRegister, usercontroller.store)
+router.post("/register", validationRegister, usercontroller.store)
 
 router.get('/profile/id/:id', usercontroller.profile);
 
