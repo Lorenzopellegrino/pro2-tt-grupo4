@@ -35,7 +35,7 @@ let validationsLogin = [
             .then(function(result){
                 if (result != undefined){
 
-                    let check = bcrypt.compareSync(req.body.password, result.contrasenia);
+                    let check = (req.body.password == result.contrasenia);
                     if(!check){
                         throw new Error ('La contraseña es incorrecta')
                     }

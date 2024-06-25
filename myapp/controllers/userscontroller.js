@@ -74,7 +74,7 @@ const usercontroller = {
                     req.session.user = result;
                     if (req.session.user = result) {
                         if (form.remember != undefined){
-                            res.cookie("userId", result.id, {maxAge: 1000 * 60 * 35})
+                            res.cookie("usuarioId", result.id, {maxAge: 1000 * 60 * 35})
                         }
                         return res.redirect("/users/profile/id/" + result.id);
                     } 
@@ -96,9 +96,10 @@ const usercontroller = {
 
     logout: function (req,res,next) {
         req.session.destroy();
-        res.clearCookie("userId")
+        res.clearCookie("usuarioId")
         return res.redirect("/")
     },
+
     profile: function(req, res, next){
 
         let id = req.params.id;
